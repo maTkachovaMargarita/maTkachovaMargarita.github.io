@@ -1,0 +1,123 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	border: 20px solid rgb(43,129,172);
+}
+
+html,body{
+	min-height: 100%;
+}
+
+body{
+	font-style: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif
+	font-size: 100%;
+	background-color: rgb(51,153,204);
+	color: rgb(255,255,255);
+
+}
+
+.container{
+	width: 1170px;
+	margin: 30px auto;
+}
+
+ul{
+	font-size: 0px;
+	margin: 20px 0;
+	border: 2px solid #fff;
+
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+	font-size: 34px;
+	text-align: center;
+	padding: 40px;
+	border: 2px solid #fff;
+	
+}
+
+li:nth-child(1), li:nth-child(9){
+	width: 50%;
+}
+
+li:nth-child(n+2):nth-child(-n+8), li:nth-child(10){
+	width: 25%;
+}
+
+li:nth-child(11){
+	width: 100%;
+}
+
+.city1{
+	background-color: rgb(51,153,204);
+}
+
+.city2{
+	background-color: rgb(51,204,204);
+}
+
+.city3{
+	background-color: rgb(153,102,153);
+}
+
+.city4{
+	background-color: rgb(194,71,71);
+}
+
+.city5{
+	background-color: rgb(226,103,74);
+}
+
+.city6{
+	background-color: rgb(255,204,102);
+}
+
+.city7{
+	background-color: rgb(153,204,153);
+}
+
+.city8{
+	background-color: rgb(102,153,153);
+}
+
+.city9{
+	background-color: rgb(204,102,153);
+}
+
+.city10{
+	background-color: rgb(51,153,102);
+}
+
+.city11{
+	background-color: rgb(102,102,153);
+}
+
+ul:hover li {
+  opacity:0.5;
+  transition: all .1s ease-in;
+}
+
+ul:hover li:hover {
+  opacity:1;
+  transition: all .1s ease-in;
+}
+
+span{
+	display: block;
+}
+
+i{
+	color: white;
+	font-size: 30px;
+}
+
+p{
+	font-size: 18px;
+}
+
