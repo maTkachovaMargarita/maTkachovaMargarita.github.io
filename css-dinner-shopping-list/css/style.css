@@ -31,6 +31,8 @@ li{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
 }
 
 li:nth-child(odd){
@@ -43,8 +45,8 @@ li:nth-child(even){
 
 li:hover{
 	background-color: rgb(98,94,119);
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #fff;
+	border-top-color: #fff;
+	border-bottom-color:  #fff;
 	cursor: pointer;
 }
 
@@ -71,7 +73,10 @@ input{
 	  text-decoration: line-through;
 	color: rgb(196,195,200);
 	opacity: .6;
-	
+
+}
+li:active{
+	background-color: rgb(235,126,127);
 }
 .container{
 	width: 1170px;
