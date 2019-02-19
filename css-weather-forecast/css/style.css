@@ -35,11 +35,16 @@ ul{
 li{
 	list-style: none;
 	display: inline-block;
+}
+
+a{
+	display: block;
 	font-size: 34px;
 	text-align: center;
 	padding: 40px;
 	border: 2px solid #fff;
-	
+	text-decoration: none;
+	color: rgb(255,255,255);
 }
 
 li:nth-child(1), li:nth-child(9){
@@ -54,47 +59,47 @@ li:nth-child(11){
 	width: 100%;
 }
 
-.city1{
+.city__city1{
 	background-color: rgb(51,153,204);
 }
 
-.city2{
+.city__city2{
 	background-color: rgb(51,204,204);
 }
 
-.city3{
+.city__city3{
 	background-color: rgb(153,102,153);
 }
 
-.city4{
+.city__city4{
 	background-color: rgb(194,71,71);
 }
 
-.city5{
+.city__city5{
 	background-color: rgb(226,103,74);
 }
 
-.city6{
+.city__city6{
 	background-color: rgb(255,204,102);
 }
 
-.city7{
+.city__city7{
 	background-color: rgb(153,204,153);
 }
 
-.city8{
+.city__city8{
 	background-color: rgb(102,153,153);
 }
 
-.city9{
+.city__city9{
 	background-color: rgb(204,102,153);
 }
 
-.city10{
+.city__city10{
 	background-color: rgb(51,153,102);
 }
 
-.city11{
+.city__city11{
 	background-color: rgb(102,102,153);
 }
 
