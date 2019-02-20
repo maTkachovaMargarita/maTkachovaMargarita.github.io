@@ -49,17 +49,13 @@ li:hover{
 	cursor: pointer;
 }
 
-.main_check{
+label{
 	flex-grow: 1;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	text-decoration: none;
 	color: rgb(255,255,255);
-}
-
-label{
-	flex-grow: 1;
 }
 
 small{
