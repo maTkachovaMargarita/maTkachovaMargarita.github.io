@@ -43,7 +43,8 @@ body{
 }
 
 .huge-search__search{
-	width: 100%;
+	width: calc(100% - 128px);
+	height: 128px;
 	background-color: rgb(241,241,241);
 	border: none;
 	color: #ec5a62;
@@ -57,7 +58,8 @@ body{
 }
 
 .huge-search__button{
-	width: calc(24.1% - 7rem);
+	width: 128px;
+	height: 128px;
 	font-size: 7rem;
 	background-color: rgb(241,241,241);
 	background-image: url(../images/magnifier.svg);
