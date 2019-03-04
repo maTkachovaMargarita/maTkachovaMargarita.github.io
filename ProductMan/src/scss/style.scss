@@ -13,6 +13,11 @@ body{
 	background-color: #eee;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+}
+
 .container{
 	width: 100%;
 	max-width: 1198px;
@@ -22,15 +27,10 @@ body{
 .navigation{
 	display: flex;
 	justify-content: space-between;
-}
-
-.navigation>*{
-	margin: 50px 0;
-}
-
-a{
-	text-decoration: none;
-	color: black;
+	align-items: center;
+	margin-bottom: 100px;
+	line-height: 27px;
+	padding: 54px 0 0;
 }
 
 .logo__link{
@@ -38,24 +38,23 @@ a{
 	color:  #303030;
 	font-size: 48px;
 	font-weight: 900;
-	line-height: 27px;
 }
 
 .navbar{
 	display: flex;
 	justify-content: space-between;
 	font-size: 0;
+	margin-bottom: 0px;
 
 	&__list{
 		list-style: none;
+		margin-right: 50px;
 
-		&:last-child>.navbar__link{
-			width: 18px;
+		&:last-child{
+			width: 15px;
 			height: 27px;
 			position: relative;
 			margin-right: 0px;
-			margin-top: -1px;
-
 		}
 	}
 
@@ -64,26 +63,20 @@ a{
 		color:  #303030;
 		font-size: 18px;
 		font-weight: 400;
-		line-height: 27px;
-		margin-right: 40px;
 		display: block;
-
-		
 
 		&__line{
 			display:block;
-			width: 18px;
+			width: 16px;
 			border-bottom: solid 2px #000;
 			position:absolute;
 			top: 50%;
 
-
-
 			&:nth-child(1){
-				transform:translateY(-6px);
+				transform:translateY(-5.5px);
 			}
 			&:nth-child(3){
-				transform:translateY(6px);
+				transform:translateY(5.5px);
 			}
 		}
 	}
@@ -94,6 +87,7 @@ a{
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-bottom: 100px;
 }
 
 .information{
@@ -111,6 +105,7 @@ a{
 		line-height: 150px;
 		margin: 0;
 		text-transform: uppercase;
+		padding-bottom: 20px;
 	}
 
 	&__text{
@@ -120,6 +115,7 @@ a{
 		font-size: 24px;
 		font-weight: 300;
 		line-height: 36px;
+		padding-bottom: 12px;
 	}
 
 	&__red{
@@ -151,29 +147,36 @@ a{
 	flex-basis: 100%;
 	max-width: 100%;
 	text-align: center;
+	padding-top: 60px;
 
 	&__circle{
 		display: inline-block;
-		width: 10px;
-		height: 10px;
+		width: 11px;
+		height: 11px;
 		background-color: #303030;
 		border-radius: 50%;
-		margin: 40px 0;
+		margin-right: 5px;
 	}
 
 	&__circle:first-child{
 		background-color: #e10011;
 	}
+
+	&__circle:last-child{
+		margin-right: 0;
+	}
 }
 .future-word{
 	background-color: #fff;
-	padding: 10% 5% 5%;
+	border-radius: 5px;
+	padding: 100px 0 70px;
+	margin-bottom: 88px;
 }
 
 .headline{
 	text-align: center;
 	max-width: 50%;
-	margin: auto;
+	margin: 0 auto 78px;
 
 	&__news{
 		font-family: 'Raleway', sans-serif;
@@ -189,7 +192,6 @@ a{
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 24px;
-		margin-bottom: 78px;
 	}
 }
 
@@ -197,29 +199,42 @@ a{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	width: 1060px;
+	width: 90%;
+	max-width: 1060px;
 	margin: auto;
 	
-	.first-row, .second-row{
+	.first-row,
+	.second-row{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: stretch;
 		text-align: center;
-		margin-bottom: 38px;
-		
 	}
 
-	.first-row>div, .second-row>div{
-		width: 30%;
+	.first-row>div, 
+	.second-row>div{
+		flex-basis: 30.5%;
 		position: relative;
 	}
 
-	.first-row>div:first-child{
-		width: 65%;
+	.first-row{
+		margin-bottom: 30px;
+
+		& > div:first-child{
+			flex-basis: 65.5%;
+		}
 	}
-	
-	.first-row__link, .second-row__link{
+
+	.first-row__img,
+	.second-row__img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.first-row__link,
+	.second-row__link{
 		display: block;
 		background-color: #eee;
 		height: 100%;
@@ -227,19 +242,23 @@ a{
 		overflow: hidden;
 	}
 
-	.first-row__link::after, .second-row__link::after{
+	.first-row__link::after,
+	.second-row__link::after{
 		content: '';
 		position: absolute;
-		display: none;
+		display: block;
 		top:0;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		background-color: #e10011;
 		border-radius: 5px;
+		opacity: 0;
+		transition: opacity .2s ease;
 	}
 
-	.first-row__link__text, .second-row__link__text{
+	.first-row__link__text,
+	.second-row__link__text{
 		position: absolute;
 		z-index: 1000000;
 		bottom: 0;
@@ -251,10 +270,11 @@ a{
 		color:  #ffffff;
 		font-size: 30px;
 		font-weight: 900;
-		display: none;
+		opacity: 0;
 	}
 
-	.first-row__link__text span, .second-row__link__text span{
+	.first-row__link__text span,
+	.second-row__link__text span{
 		border-bottom: 5px solid #fff;
 		padding-bottom: 7px;
 
@@ -262,13 +282,20 @@ a{
 }
 
 
-.first-row__link:hover::after, .first-row__link:hover>.first-row__link__text, .second-row__link:hover::after, .second-row__link:hover>.second-row__link__text{
-	display: block;
+.first-row__link:hover::after,
+.first-row__link:hover>.first-row__link__text,
+.second-row__link:hover::after, 
+.second-row__link:hover>.second-row__link__text{
+	opacity: 1;
 }
 
 .option{
 	text-align: center;
-	margin: 100px 0 30px;
+	margin: 0;
+
+	& > .headline{
+		margin-bottom: 45px;
+	}
 
 	&__mail{
 		font-size: 0;
@@ -278,7 +305,7 @@ a{
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		margin-bottom: 100px;
+		margin-bottom: 110px;
 
 	}
 
@@ -315,6 +342,9 @@ a{
 		border-bottom-right-radius: 35px;
 		text-transform: uppercase;
 		
+		&:hover{
+			cursor: pointer;
+		}
 	}
 
 	
@@ -324,37 +354,45 @@ a{
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	width: 340px;
-	margin: auto;
+	max-width: 340px;
+	margin: 0 auto 60px;
 	font-size: 0;
-	margin-bottom: 70px;
-	
 
 	&__list{
-		flex-basis: 20%;
+		flex-basis: 25%;
+		margin-right: 20px;
+
+		&:last-child{
+			margin-right: 0;
+		}
 
 	}
 
 	&__link{
 		display: block;
 		background-color: #fff;
-		font-size: 50px;
-		height: 100%;
+		color: #979797;
+		font-size: 30px;
+		line-height: 70px;
 		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+		text-align: center;
 	}
 }
 
 .copyright, b{
 	font-family: 'Raleway',sans-serif;
-color:  #979797;
-font-size: 18px;
-font-weight: 400;
-line-height: 24px;
-text-align: center;
+	color:  #979797;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	padding:0 0 20px;
 }
 
 b{
-color:  #303030;
+	color:  #303030;
 }
 
 
