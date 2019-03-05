@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,900|Roboto:300,400,700,900');
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -95,6 +97,7 @@ a{
 	flex-basis: 50%;
 	max-width: 50%;
 	text-align: right;
+	margin-bottom: 60px;
 
 	&__black{
 		
@@ -136,6 +139,7 @@ a{
 	flex-basis: 50%;
 	max-width: 50%;
 	text-align: center;
+	margin-bottom: 60px;
 
 	&__img{
 
@@ -145,31 +149,37 @@ a{
 .nav-slider{
 	flex-grow: 1;
 	flex-basis: 100%;
-	max-width: 100%;
-	text-align: center;
-	padding-top: 60px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 
 	&__circle{
-		display: inline-block;
-		width: 11px;
-		height: 11px;
-		background-color: #303030;
-		border-radius: 50%;
-		margin-right: 5px;
+		list-style: none;
+
+		&__link{
+			display: block;
+			width: 11px;
+			height: 11px;
+			background-color: #303030;
+			border-radius: 50%;
+			margin-right: 5px;
+		}
+
+		&:first-child .nav-slider__circle__link{
+			background-color: #e10011;
+		}
+
+		&:last-child .nav-slider__circle__link{
+			margin-right: 0;
+		}
 	}
 
-	&__circle:first-child{
-		background-color: #e10011;
-	}
-
-	&__circle:last-child{
-		margin-right: 0;
-	}
+	
 }
 .future-word{
 	background-color: #fff;
 	border-radius: 5px;
-	padding: 100px 0 70px;
+	padding: 100px 70px 70px;
 	margin-bottom: 88px;
 }
 
@@ -186,6 +196,14 @@ a{
 		line-height: 66px;
 	}
 
+	&__underline{
+		background: url("../img/underline.png") no-repeat center;
+		background-size: 50%;
+		width: 100%;
+		height: 24px;
+		display: block;
+	}
+
 	&__text{
 		font-family: 'Raleway', sans-serif;
 		color:  #303030;
@@ -199,9 +217,8 @@ a{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	width: 90%;
+	width: 100%;
 	max-width: 1060px;
-	margin: auto;
 	
 	.first-row,
 	.second-row{
