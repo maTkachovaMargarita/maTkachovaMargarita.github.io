@@ -226,6 +226,8 @@ a
 }
 .nav-slider__circle
 {
+    margin-right: 5px; 
+
     list-style: none;
 }
 .nav-slider__circle__link
@@ -234,16 +236,15 @@ a
 
     width: 11px;
     height: 11px;
-    margin-right: 5px; 
 
-    border-radius: 50%;
+    border-radius: 50%; 
     background-color: #303030;
 }
 .nav-slider__circle:first-child .nav-slider__circle__link
 {
     background-color: #e10011;
 }
-.nav-slider__circle:last-child .nav-slider__circle__link
+.nav-slider__circle:last-child
 {
     margin-right: 0;
 }
@@ -423,7 +424,8 @@ a
 
 .option
 {
-    margin: 0; 
+    margin: 0;
+    padding: 0 0 20px; 
 
     text-align: center;
 }
@@ -442,7 +444,8 @@ a
     display: flex;
         flex-direction: row;
 
-    margin-bottom: 110px; 
+    max-width: 50%; 
+    margin: 0 auto 110px;
 
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -463,10 +466,9 @@ a
     font-size: 18px;
     font-weight: 600;
     font-style: italic;
-    line-height: 24px;
+    line-height: 70px;
 
-    width: 500px;
-    height: 70px;
+    width: 100%;
     padding-left: 60px;
 
     color: #979797;
@@ -478,15 +480,16 @@ a
     background-repeat: no-repeat; 
     background-position: 30px;
     background-size: 18px;
+
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
 }
 .option__button
 {
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 900;
-
-    width: 200px;
-    height: 70px;
+    line-height: 70px;
 
     text-transform: uppercase; 
 
@@ -495,6 +498,9 @@ a
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
     background-color: #e10011;
+
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
 }
 .option__button:hover
 {
@@ -554,9 +560,7 @@ b
     font-weight: 400;
     line-height: 24px;
 
-    padding: 0 0 20px; 
-
-    text-align: center;
+    text-align: center; 
 
     color: #979797;
 }
