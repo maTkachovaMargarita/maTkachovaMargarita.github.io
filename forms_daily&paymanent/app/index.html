@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Forms_daily&paymanent</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/x-icon" href="img/cart.png">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- <div class="main"> -->
+		
+		<form name="daily" action="#" method="post" class="daily-form">
+
+			<h1 class="daily-form__tit">
+				<i class="fas fa-key"></i>Create your free account
+			</h1>
+
+			<label class="daily-form__caption">Come and join our cool and amazing community, fill in your details
+				to get started. Already have an account?<b> Log in.</b>
+			</label>
+
+			<input type="text" name="firstName" placeholder="First Name" class="daily-form__username">
+
+			<input type="text" name="lastName" placeholder="Last Name" class="daily-form__username">
+
+			<input type="email" name="email-address" placeholder="Email address" class="daily-form__email">
+
+			<input type="password" name="password" placeholder="Password" class="daily-form__password">
+
+			<input type="submit" name="submit" value="Sign up for free" class="daily-form__btn">
+
+			<label class="daily-form__caption">By clicking on “Sign up for free”, you agree to the <b>Terms of Service</b> and 
+				the <b>Privacy Policy</b>
+			</label>
+
+		</form>
+
+		<div class="payment">
+			<div class="yellow">
+				<p class="yellow__product">Harold Finch<span>your total</span></p>
+				<h1 class="yellow__price">$88</h1>
+			</div>
+			<form name="payment-form" action="#" method="post" class="payment-form">
+
+				<label for="cardNumber" class="payment-form__cardNumber">Credit card number</label>
+				<input id="cardNumber" type="number" name="cardNumber">
+				
+
+				<label class="payment-form__date">Expiration date</label>
+				<select class="payment-form__month" name="month" value="month">
+					<option>January</option>
+					<option>February</option>
+					<option>March</option>
+					<option>April</option>
+					<option>May</option>
+					<option>June</option>
+					<option>July</option>
+					<option>August</option>
+					<option>September</option>
+					<option>October</option>
+					<option>November</option>
+					<option>December</option>
+				</select>
+
+				<select class="payment-form__year" name="year" value="year">
+					<option>2019</option>
+				</select>
+
+				<label for="cardCVV"  class="payment-form__cvv">Credit card number</label>
+				<label class="payment-form__rede"><input id="cardCVV" type="number" name="cardCVV" maxlength="4">
+				3 or 4 digits - <span>view example</span></label>
+				<hr>
+
+				<input type="submit" name="submit" value="Pay"  class="payment-form__btn">	
+
+				<label  class="payment-form__caption">Cancel order</label>
+			</form>
+		</div>
+		<!-- 	</div> -->
+
+		<script src="js/script.js"></script>
+	</body>
+	</html>

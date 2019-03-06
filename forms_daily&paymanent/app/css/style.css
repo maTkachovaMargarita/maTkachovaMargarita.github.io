@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html,
+body
+{
+    min-height: 100vh;
+}
+
+body
+{
+    font-family: sans-serif;
+    font-size: 100%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#ff512f), color-stop(50%, #ea355c), color-stop(80%, #dd2476));
+    background-image: linear-gradient(to top right, #ff512f 0%, #ea355c 50%, #dd2476 80%);
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.daily-form
+{
+    font-family: 'Arial',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    max-width: 460px;
+    margin-right: 20px;
+    padding: 15px 30px 30px;
+
+    color: #797b7f;
+    border-radius: 10px;
+    border-radius: 4px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2); 
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.daily-form > input
+{
+    padding: 10px; 
+
+    border: none;
+    border-radius: 4px;
+}
+.daily-form > input:not([type='submit'])
+{
+    margin-bottom: 1rem; 
+
+    background-color: #f0f0f0;
+}
+.daily-form__tit
+{
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: .5rem; 
+
+    color: #1b1c1d;
+}
+.daily-form__tit > i
+{
+    padding-right: 10px; 
+
+    color: #ea355a;
+}
+.daily-form__caption
+{
+    margin-bottom: 1.5rem;
+}
+.daily-form__caption > *
+{
+    color: #ea355a;
+}
+.daily-form > *:not([type='text'])
+{
+    width: 100%; 
+
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.daily-form__username
+{
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+}
+.daily-form__btn
+{
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+
+    cursor: pointer; 
+
+    color: #fff;
+    background-color: #ea355a;
+    -webkit-box-shadow: 0 3px 0 0 #bd1962;
+            box-shadow: 0 3px 0 0 #bd1962;
+}
+
+.payment
+{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400; 
+
+    max-width: 336px;
+
+    background-color: #fff;
+}
+
+.yellow
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 15px; 
+    padding: 15px;
+
+    background-color: #f8edaf;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.yellow__product
+{
+    font-size: 14px;
+    font-weight: 700; 
+
+    color: #6e7f7b;
+}
+.yellow__product > span
+{
+    font-size: 10px; 
+
+    display: block;
+
+    text-transform: uppercase;
+
+    color: #a6a28d;
+}
+.yellow__price
+{
+    font-size: 36px; 
+
+    color: #637570;
+}
+
+.payment-form
+{
+    font-size: 13px;
+    font-weight: 400; 
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 15px;
+
+    color: #9eabad;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.payment-form > label
+{
+    width: 100%; 
+    padding-bottom: 5px;
+}
+.payment-form input:not([type='submit']),
+.payment-form > select
+{
+    margin-bottom: 20px; 
+    padding: 10px;
+
+    color: #727f82;
+}
+.payment-form #cardNumber
+{
+    width: 100%;
+}
+.payment-form #cardCVV
+{
+    width: 30%;
+    margin-right: 10px;
+}
+.payment-form__month
+{
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+}
+.payment-form__year
+{
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+}
+.payment-form__rede
+{
+    font-size: 12px;
+}
+.payment-form__rede > span
+{
+    text-decoration: underline;
+}
+.payment-form__btn
+{
+    font-size: 18px;
+    font-weight: 700;
+
+    width: 100%;
+    margin-bottom: 20px; 
+    padding: 15px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border: none;
+    background-color: #25b86a;
+}
+.payment-form__caption
+{
+    text-align: center;
+    text-decoration: underline;
+}
+.payment-form hr
+{
+    width: 100%; 
+    margin-bottom: 20px;
+
+    color: #9eabad;
+}
