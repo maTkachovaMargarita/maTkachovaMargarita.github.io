@@ -126,11 +126,12 @@ body
 .payment
 {
     font-family: 'Montserrat',sans-serif;
-    font-weight: 400; 
+    font-weight: 400;
 
     max-width: 336px;
 
     background-color: #fff;
+    background-color: #f5f5f5;
 }
 
 .yellow
@@ -203,14 +204,16 @@ body
 .payment-form input:not([type='submit']),
 .payment-form > select
 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     padding: 10px;
 
     color: #727f82;
+    border: 2px solid #bac8cb; 
+    background-color: #f5f5f5;
 }
 .payment-form select
 {
-    background: url('../img/Shape.png') 96%/15% no-repeat #f5f5f5;
+    background: url('../img/Shape.png') 96%/15% no-repeat;
     background-size: 15px; 
 
     -webkit-appearance: none;
@@ -240,9 +243,9 @@ body
 {
     font-size: 12px;
 }
-.payment-form__rede > span
+.payment-form__rede__caption
 {
-    text-decoration: underline;
+    color: #9eabad;
 }
 .payment-form__btn
 {
