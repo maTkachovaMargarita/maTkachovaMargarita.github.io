@@ -46,7 +46,7 @@ body
 
     max-width: 460px;
     margin-right: 20px;
-    padding: 15px 30px 30px;
+    padding: 15px 30px 60px;
 
     color: #797b7f;
     border-radius: 10px;
@@ -85,16 +85,14 @@ body
 }
 .daily-form__tit > i
 {
-    padding-right: 10px; 
+    margin-right: 10px; 
 
     color: #ea355a;
 }
-.daily-form__caption
+.daily-form .pink
 {
-    margin-bottom: 1.5rem;
-}
-.daily-form__caption > *
-{
+    text-decoration: none; 
+
     color: #ea355a;
 }
 .daily-form > *:not([type='text'])
@@ -197,10 +195,10 @@ body
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
-.payment-form > label
+.payment-form > label:not([class='payment-form__rede'])
 {
     width: 100%; 
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 .payment-form input:not([type='submit']),
 .payment-form > select
@@ -210,11 +208,20 @@ body
 
     color: #727f82;
 }
-.payment-form #cardNumber
+.payment-form select
+{
+    background: url('../img/Shape.png') 96%/15% no-repeat #f5f5f5;
+    background-size: 15px; 
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.payment-form__cardNumber
 {
     width: 100%;
 }
-.payment-form #cardCVV
+.payment-form__cardCVV
 {
     width: 30%;
     margin-right: 10px;
@@ -254,8 +261,13 @@ body
 }
 .payment-form__caption
 {
+    display: block;
+
+    width: 100%; 
+
     text-align: center;
-    text-decoration: underline;
+
+    color: #9eabad;
 }
 .payment-form hr
 {
