@@ -113,14 +113,18 @@ body
     font-size: 18px;
     font-weight: 700;
 
-    margin-bottom: 2rem;
-
-    cursor: pointer; 
+    margin-bottom: 2rem; 
 
     color: #fff;
     background-color: #ea355a;
     -webkit-box-shadow: 0 3px 0 0 #bd1962;
             box-shadow: 0 3px 0 0 #bd1962;
+}
+.daily-form__btn:hover
+{
+    cursor: pointer;
+
+    background-color: #ff512f;
 }
 
 .payment
@@ -256,11 +260,15 @@ body
     margin-bottom: 20px; 
     padding: 15px;
 
-    cursor: pointer;
-
     color: #fff;
     border: none;
     background-color: #25b86a;
+}
+.payment-form__btn:hover
+{
+    cursor: pointer; 
+
+    background-color: #f8edaf;
 }
 .payment-form__caption
 {

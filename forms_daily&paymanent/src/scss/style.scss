@@ -81,7 +81,11 @@ body{
 		font-size: 18px;
 		font-weight: 700;
 		margin-bottom: 2rem;
-		cursor: pointer;
+
+		&:hover{
+			cursor: pointer;
+			background-color:  #ff512f;
+		}
 	}
 }
 
@@ -177,10 +181,14 @@ body{
 		background-color:  #25b86a;
 		border:none;
 		padding: 15px;
-		cursor: pointer;
 		font-size: 18px;
 		font-weight: 700;
 		margin-bottom: 20px;
+
+		&:hover{
+			background-color:  #f8edaf;
+			cursor: pointer;
+		}
 	}
 
 	&__caption{
