@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	font-size: 100%;
+	background-image: -webkit-gradient(linear, left bottom, right top, from(#ff512f), color-stop(50%, #ea355c), color-stop(80%, #dd2476));
+	background-image: linear-gradient(to top right, #ff512f 0%, #ea355c 50%, #dd2476 80%);
+	font-family: sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.daily-form {
+	background-color: white;
+	font-family: "Arial",sans-serif;
+	color: #797b7f;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 15px 30px 60px;
+	border-radius: 10px;
+	max-width: 460px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-right: 20px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+	        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+.daily-form > input {
+	border-radius: 4px;
+	border: none;
+	padding: 10px;
+}
+.daily-form > input:not([type="submit"]) {
+	background-color: #f0f0f0;
+	margin-bottom: 1rem;
+}
+.daily-form__tit {
+	color: #1b1c1d;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: .5rem;
+}
+.daily-form__tit > i {
+	color: #ea355a;
+	margin-right: 10px;
+}
+.daily-form .pink {
+	color: #ea355a;
+	text-decoration: none;
+}
+.daily-form > *:not([type="text"]) {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	width: 100%;
+}
+.daily-form__username {
+	-ms-flex-preferred-size: 48%;
+	flex-basis: 48%;
+}
+.daily-form__btn {
+	color: #fff;
+	background-color: #ea355a;
+	-webkit-box-shadow: 0 3px 0 0 #bd1962;
+	        box-shadow: 0 3px 0 0 #bd1962;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+.daily-form__btn:hover {
+	cursor: pointer;
+	background-color: #ff512f;
+}
+
+.payment {
+	background-color: #fff;
+	max-width: 336px;
+	font-family: "Montserrat",sans-serif;
+	font-weight: 400;
+	background-color: #f5f5f5;
+}
+
+.yellow {
+	background-color: #f8edaf;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.yellow__product {
+	color: #6e7f7b;
+	font-size: 14px;
+	font-weight: 700;
+}
+.yellow__product > span {
+	display: block;
+	text-transform: uppercase;
+	color: #a6a28d;
+	font-size: 10px;
+}
+.yellow__price {
+	color: #637570;
+	font-size: 36px;
+}
+
+.payment-form {
+	padding: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	font-size: 13px;
+	color: #9eabad;
+	font-weight: 400;
+}
+.payment-form__for-cardNumber,
+.payment-form__date,
+.payment-form__cvv {
+	margin-bottom: 5px;
+	width: 100%;
+}
+.payment-form__cardNumber,
+.payment-form__btn {
+	margin-bottom: 20px;
+}
+.payment-form input:not([type="submit"]),
+.payment-form__month,
+.payment-form__year {
+	color: #727f82;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 2px solid #bac8cb;
+}
+.payment-form__date-month,
+.payment-form__date-year {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 20px;
+}
+.payment-form__date-month::after,
+.payment-form__date-year::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top: 9px solid #bac8cb;
+	-webkit-transform: translateY(50%);
+	        transform: translateY(50%);
+	top: 25%;
+	right: 10px;
+}
+.payment-form__date-month {
+	-ms-flex-preferred-size: 60%;
+	flex-basis: 60%;
+}
+.payment-form__date-year {
+	-ms-flex-preferred-size: 35%;
+	flex-basis: 35%;
+}
+.payment-form__month,
+.payment-form__year {
+	width: 100%;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+.payment-form__cardNumber {
+	width: 100%;
+}
+.payment-form__cardCVV {
+	width: 30%;
+	margin-right: 10px;
+}
+.payment-form__rede {
+	font-size: 12px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #9eabad;
+	margin-bottom: 20px;
+}
+.payment-form__rede__caption {
+	color: #9eabad;
+}
+.payment-form__btn {
+	width: 100%;
+	color: #fff;
+	background-color: #25b86a;
+	border: none;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: 700;
+}
+.payment-form__btn:hover {
+	background-color: #f8edaf;
+	cursor: pointer;
+}
+.payment-form__caption {
+	text-align: center;
+	display: block;
+	color: #9eabad;
+	width: 100%;
+}

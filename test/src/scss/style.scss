@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100vh;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+}
+
+label{
+	display: inline-block;
+	position: relative;
+
+	&::after{
+		content: "";
+		position: absolute;
+		display: block;
+		$size: 15px;
+		width: $size;
+		height: $size;
+		border:2px solid white;
+		border-left-color: transparent;
+		border-top-color: transparent;
+		transform: rotate(45deg) translateY(-100%);
+		top: 50%;
+		right: 30px;
+	}
+
+	& > *{
+		font-size: 32px;
+		background-color: black;
+		color: white;
+		padding: 10px  50px 15px 10px;
+	}
+}
+
+select{
+	appearance:none;
+	position: relative;
+	pointer-events: none;
+}
+
+
+
+// section{
+// 	min-height: 20vh;
+// 	border-bottom: 1px solid black;
+// }
+
+// @for $i from 1 through 3 {
+// 	.section-#{$i}{
+// 		background-color: red;
+// 	}
+
+// }
+// $colors:(
+// 	red, blue, green, black, grey
+
+// 	);
+
+// @each $color in $colors {
+//   .#{$color}{
+//    background-color: #{$color};
+//   }
+// }
+
+// $i: 6;
+// @while $i > 0 {
+//  .item-#{$i} { width: 2em * $i; }
+//  $i: $i - 2;
+// }
+
+// $z-index: (
+//     navbar: 1,
+//     content: 2
+// );
+
+// @function z($key) {
+//   @return map-get($z-index, $key);
+// }
+
+// @mixin z-index($key) {
+//   z-index: z-index($key);
+// }
+
+// .navigation {
+//   @include z-index(navbar); // 1
+// }

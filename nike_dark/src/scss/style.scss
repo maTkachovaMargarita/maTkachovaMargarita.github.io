@@ -97,9 +97,14 @@ body{
 				}
 			}
 
-			&__check{
-				color: red;
+			#radio > label{
+				position: relative;
 			}
+
+			#radio{
+				position: absolute;
+			}
+
 		}
 		
 	}
@@ -152,34 +157,53 @@ body{
 			margin-bottom: 20px;
 		}
 
-		&--size, &--qty{
-			color: #93969b;
-			background-color: #111a28;
-			padding: 10px;
-			width: 70px;
-			appearance: none; 
-			background: url("../img/Rectangle.png") 90% / 15% no-repeat;
-			background-size: 12px;
-		}
+		&--size-label, &--qty-label{
+			display: inline-block;
+			position: relative;
 
-		select:hover{
-			cursor: pointer;
-		}
-
-
-		&--btn{
-			background-color: #202835;
-			color: #93969b;
-			border: 1px solid #93969b;
-			width: 70%;
-			padding: 10px;
-			margin-bottom: 0;
-
-			&:hover{
-				background-color: #111a28;
-				cursor: pointer;
+			&::after{
+				content: "";
+				position: absolute;
+				display: block;
+				width: 7px;
+				height: 7px;
+				border:1px solid #93969b;
+				border-left-color: transparent;
+				border-top-color: transparent;
+				transform: rotate(45deg) translateY(-100%);
+				top: 50%;
+				right: 15px;
 			}
 		}
 
+			&--size, &--qty{
+				color: #93969b;
+				background-color: #111a28;
+				padding: 10px;
+				width: 70px;
+				appearance: none; 
+				// background: url("../img/Rectangle.png") 90% / 15% no-repeat;
+				// background-size: 12px;
+			}
+
+			select:hover{
+				cursor: pointer;
+			}
+
+
+			&--btn{
+				background-color: #202835;
+				color: #93969b;
+				border: 1px solid #93969b;
+				width: 70%;
+				padding: 10px;
+				margin-bottom: 0;
+
+				&:hover{
+					background-color: #111a28;
+					cursor: pointer;
+				}
+			}
+
+		}
 	}
-}
