@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,16 +27,16 @@
 			<nav class="navigation">
 				<ul class="menu">
 					<li class="menu__item">
-						<a href="#" class="menu__link">accueli</a>
+						<a href="#first-screen" class="menu__link">accueli</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">portfolio</a>
+						<a href="#portfolio" class="menu__link">portfolio</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">about</a>
+						<a href="#about" class="menu__link">about</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">contact</a>
+						<a href="#contacts" class="menu__link">contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -49,7 +49,7 @@
 
 	<!-- FIRST-SCREEN -->
 
-	<header class="first-screen">
+	<header class="first-screen" id="first-screen">
 		<div class="container">
 
 			<div class="row">
@@ -63,7 +63,7 @@
 
 	<!-- END FIRST-SCREEN -->
 
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<div class="container">
 
 			<div class="row">
@@ -126,7 +126,7 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="about__block">
@@ -140,23 +140,23 @@
 		</div>
 	</section>
 
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<h2 class="contacts__title">Me contacter</h2>
 
 			<form action="" class="contacts__form">
-
 				<div class="input-row">
 					<label for="1" class="contacts__label">
-						<input type="text" class="contacts__input" id="1">
+						<input type="text" id="1" class="contacts__input" placeholder="Votre nom">
 					</label>
 					<label for="2" class="contacts__label">
-						<input type="text" class="contacts__input" id="2">
-					</label>
-					<label for="3" class="contacts__label">
-						<textarea  id="3" cols="30" rows="10"class="contacts__textarea"></textarea>
+						<input type="text" id="2" class="contacts__input" placeholder="Votre email">
 					</label>
 				</div>
+
+				<label for="3" class="contacts__textarea-label">
+					<textarea class="contacts__textarea" name="" id="3" placeholder="Votre message"></textarea>
+				</label>
 
 				<input type="submit" value="Envoyer">
 			</form>
@@ -166,7 +166,27 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				
+
+				<p class="footer__copyright">Copyright &copy; 2015 by beneggen - &nbsp;
+					<a href="#" class="footer__link">www.beneggen.fr</a>
+				</p>
+
+				<nav class="social">
+					<ul class="social__menu">
+						<li class="social__item">
+							<a href="#" class="social__link twitter" target="_blank"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link linkedin" target="_blank"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link dribbble" target="_blank"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link behance" target="_blank"></a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</footer>

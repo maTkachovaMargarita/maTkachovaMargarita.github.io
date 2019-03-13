@@ -69,6 +69,12 @@ body {
 	color: #ea355a;
 	margin-right: 10px;
 }
+.daily-form__caption {
+	margin-bottom: 30px;
+}
+.daily-form__caption:last-child {
+	margin-bottom: 0;
+}
 .daily-form .pink {
 	color: #ea355a;
 	text-decoration: none;
@@ -153,8 +159,28 @@ body {
 .payment-form__for-cardNumber,
 .payment-form__date,
 .payment-form__cvv {
-	margin-bottom: 5px;
 	width: 100%;
+}
+.payment-form__for-cardNumber {
+	position: relative;
+}
+.payment-form__for-cardNumber::after {
+	content: "Format: 1234 1234 1234 1234";
+	display: block;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	color: rgba(99, 117, 112, .3);
+	text-align: center;
+	opacity: 0;
+}
+.payment-form__for-cardNumber:hover::after {
+	opacity: 1;
+}
+.payment-form__date,
+.payment-form__cvv {
+	margin-bottom: 5px;
 }
 .payment-form__cardNumber,
 .payment-form__btn {
@@ -187,6 +213,7 @@ body {
 	        transform: translateY(50%);
 	top: 25%;
 	right: 10px;
+	pointer-events: none;
 }
 .payment-form__date-month {
 	-ms-flex-preferred-size: 60%;
@@ -206,18 +233,34 @@ body {
 .payment-form__cardNumber {
 	width: 100%;
 }
+.payment-form .card-verification-value {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
 .payment-form__cardCVV {
 	width: 30%;
 	margin-right: 10px;
 }
 .payment-form__rede {
 	font-size: 12px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #9eabad;
-	margin-bottom: 20px;
 }
 .payment-form__rede__caption {
 	color: #9eabad;
+}
+.payment-form hr {
+	width: 100%;
+	opacity: .2;
+	margin-bottom: 20px;
 }
 .payment-form__btn {
 	width: 100%;
@@ -234,7 +277,7 @@ body {
 }
 .payment-form__caption {
 	text-align: center;
+	margin: auto;
 	display: block;
 	color: #9eabad;
-	width: 100%;
 }

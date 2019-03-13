@@ -1,4 +1,4 @@
-@mixin overlay($z-index:1){
+@mixin overlay($z-index: 1) {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -7,8 +7,7 @@
 	z-index: $z-index;
 }
 
-@mixin btn($color){
-	width: 100%;
+@mixin btn($color) {
 	max-width: 140px;
 	background: none;
 	color: $color;
@@ -21,19 +20,35 @@
 	text-transform: uppercase;
 	display: block;
 	text-decoration: none;
+	width: 100%;
 
 	&:hover {
-		color: white;
+		color: $white;
 		background-color: $color;
 		border-color: $color;
 	}
 }
 
-@mixin row(){
+@mixin row {
 	display: flex;
 	@content;
 }
 
-@mixin section-padding{
+@mixin section-padding {
 	padding: 70px 0;
+}
+
+@mixin square($size) {
+	width: $size;
+	height: $size;
+}
+
+@mixin transition ($prap:all, $time: .2s, $funk:ease){
+	transition: $prap $time $funk;
+}
+
+@mixin triangle($size, $color){
+	display: block;
+	border: $size solid transparent;
+	border-top-color: $color;
 }

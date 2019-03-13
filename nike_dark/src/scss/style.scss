@@ -60,20 +60,20 @@ body{
 .nike{
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 
-	&__left, &__rifht{
-		width: 50%;
+	&__left, &__right{
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
 	}
 
 	&__left{
-		margin-right: 15px;
+		width: 60%;
+		padding: 35px 30px 0px;
 
 		&--shoes{
 			margin-bottom: 60px;
+
 		}
 
 		&--link{
@@ -87,22 +87,53 @@ body{
 		.radio-btn{
 			display: flex;
 			justify-content: center;
+			font-size: 0;
 
 			&__list{
 				list-style: none;
 				margin-right: 5px;
+				font-size: 100%;
 
 				&:last-child{
 					margin-right: 0;
 				}
+
 			}
 
-			#radio > label{
-				position: relative;
+			&__label{
+				display: inline-block;
+				//position: relative;
+				cursor: pointer;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+
+				&.dark-blue{
+					background-color: #1f273f;
+				}
+
+				&.white{
+					background-color: #fff;
+				}
+
+				&.red{
+					background-color: #ed3333;
+				}
+
+				&.aqua{
+					background-color: #26c8d0;
+				}
 			}
 
-			#radio{
-				position: absolute;
+			&__radio{
+				display: none;
+			}
+
+			&__radio:checked + .radio-btn__label{
+				 border: 1px solid #7e838b;
+    background-color: curent;
+    width: 10px;
+    height: 10px;
 			}
 
 		}
@@ -110,7 +141,8 @@ body{
 	}
 
 	&__right{
-		align-items: flex-start;
+		width: 40%;
+		//align-items: flex-start;
 
 		&--tit{
 			display: block;
@@ -176,12 +208,12 @@ body{
 			}
 		}
 
-			&--size, &--qty{
-				color: #93969b;
-				background-color: #111a28;
-				padding: 10px;
-				width: 70px;
-				appearance: none; 
+		&--size, &--qty{
+			color: #93969b;
+			background-color: #111a28;
+			padding: 10px;
+			width: 70px;
+			appearance: none; 
 				// background: url("../img/Rectangle.png") 90% / 15% no-repeat;
 				// background-size: 12px;
 			}

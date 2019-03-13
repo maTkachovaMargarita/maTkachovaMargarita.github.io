@@ -43,36 +43,44 @@
 		</div>
 		<form name="payment-form" action="#" method="post" class="payment-form">
 
-			<label class="payment-form__for-cardNumber">Credit card number</label>
-			<input class="payment-form__cardNumber" type="text" name="cardNumber" required pattern="[0-9]">
+			<label class="payment-form__for-cardNumber">Credit card number
+				<input class="payment-form__cardNumber" type="text" name="cardNumber" maxlength="19" required pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}"></label>
 
-			<label class="payment-form__date">Expiration date</label>
-			<label for="month" class="payment-form__date-month">
-				<select class="payment-form__month" id="momth" name="month">
-					<option>January</option>
-					<option>February</option>
-					<option>March</option>
-					<option>April</option>
-					<option>May</option>
-					<option>June</option>
-					<option>July</option>
-					<option>August</option>
-					<option>September</option>
-					<option>October</option>
-					<option>November</option>
-					<option>December</option>
-				</select>
-			</label>
+				<label class="payment-form__date">Expiration date</label>
+				<label class="payment-form__date-month">
+					<select class="payment-form__month" name="month">
+						<option>Month</option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+				</label>
 
-			<label for="year" class="payment-form__date-year">
-				<select class="payment-form__year" id="year" name="year">
-					<option>2019</option>
-				</select>
-			</label>
+				<label class="payment-form__date-year">
+					<select class="payment-form__year">
+						<option>Year</option>
+						<option>2019</option>
+					</select>
+				</label>
 
-			<label class="payment-form__cvv">Credit card number</label>
-			<p class="payment-form__rede"><input class="payment-form__cardCVV" type="text" name="cardCVV" maxlength="4" required pattern="[0-9]{4}">
-				3 or 4 digits - <a href="#" class="payment-form__rede__caption">view example</a></p>
+				<label class="payment-form__cvv">Credit card number</label>
+
+				<div class="card-verification-value">
+					<input class="payment-form__cardCVV" type="text" name="cardCVV" maxlength="4" required pattern="[0-9]{4}">
+					<p class="payment-form__rede">3 or 4 digits - <a href="#" class="payment-form__rede__caption">view example</a>
+					</p>
+				</div>
+
+				<hr>
 
 				<input type="submit" name="submit" value="Pay"  class="payment-form__btn">	
 
