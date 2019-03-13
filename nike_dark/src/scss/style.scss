@@ -90,7 +90,7 @@ body{
 
 			&__list{
 				list-style: none;
-				margin-right: 5px;
+				margin-right: 10px;
 				font-size: 100%;
 
 				&:last-child{
@@ -129,6 +129,12 @@ body{
 
 			&__radio:checked + .radio-btn__label{
 				border: 1px solid #7e838b;
+				box-shadow: 1px 1px 2px -1px #7e838b,
+				1px -1px 2px -1px #7e838b, 
+				-1px 1px 2px -1px #7e838b,
+				-1px -1px 2px -1px #7e838b;
+				transform: scale(1.5, 1.5);
+				transition: transform .2s ease;
 				width: 10px;
 				height: 10px;
 			}
@@ -208,25 +214,25 @@ body{
 			padding: 10px;
 			width: 70px;
 			appearance: none; 
-			}
+		}
 
-			select:hover{
+		select:hover{
+			cursor: pointer;
+		}
+
+		&--btn{
+			background-color: #202835;
+			color: #93969b;
+			border: 1px solid #93969b;
+			width: 70%;
+			padding: 10px;
+			margin-bottom: 0;
+
+			&:hover{
+				background-color: #111a28;
 				cursor: pointer;
 			}
-
-			&--btn{
-				background-color: #202835;
-				color: #93969b;
-				border: 1px solid #93969b;
-				width: 70%;
-				padding: 10px;
-				margin-bottom: 0;
-
-				&:hover{
-					background-color: #111a28;
-					cursor: pointer;
-				}
-			}
-
 		}
+
 	}
+}

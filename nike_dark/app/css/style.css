@@ -96,7 +96,7 @@ body {
 }
 .nike__left .radio-btn__list {
 	list-style: none;
-	margin-right: 5px;
+	margin-right: 10px;
 	font-size: 100%;
 }
 .nike__left .radio-btn__list:last-child {
@@ -126,6 +126,14 @@ body {
 }
 .nike__left .radio-btn__radio:checked + .radio-btn__label {
 	border: 1px solid #7e838b;
+	-webkit-box-shadow: 1px 1px 2px -1px #7e838b,	1px -1px 2px -1px #7e838b,	-1px 1px 2px -1px #7e838b,	-1px -1px 2px -1px #7e838b;
+	        box-shadow: 1px 1px 2px -1px #7e838b,	1px -1px 2px -1px #7e838b,	-1px 1px 2px -1px #7e838b,	-1px -1px 2px -1px #7e838b;
+	-webkit-transform: scale(1.5, 1.5);
+	        transform: scale(1.5, 1.5);
+	-webkit-transition: -webkit-transform .2s ease;
+	        transition: -webkit-transform .2s ease;
+	        transition:         transform .2s ease;
+	        transition:         transform .2s ease, -webkit-transform .2s ease;
 	width: 10px;
 	height: 10px;
 }
