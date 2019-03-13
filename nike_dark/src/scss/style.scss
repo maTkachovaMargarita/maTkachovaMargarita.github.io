@@ -63,17 +63,16 @@ body{
 
 	&__left, &__right{
 		display: flex;
-		justify-content: space-between;
 		flex-direction: column;
 	}
 
 	&__left{
 		width: 60%;
-		padding: 35px 30px 0px;
+		justify-content: space-between;
+		padding: 20px 40px 0px;
 
 		&--shoes{
-			margin-bottom: 60px;
-
+			margin-bottom: 50px;
 		}
 
 		&--link{
@@ -102,7 +101,6 @@ body{
 
 			&__label{
 				display: inline-block;
-				//position: relative;
 				cursor: pointer;
 				width: 10px;
 				height: 10px;
@@ -130,10 +128,9 @@ body{
 			}
 
 			&__radio:checked + .radio-btn__label{
-				 border: 1px solid #7e838b;
-    background-color: curent;
-    width: 10px;
-    height: 10px;
+				border: 1px solid #7e838b;
+				width: 10px;
+				height: 10px;
 			}
 
 		}
@@ -142,7 +139,7 @@ body{
 
 	&__right{
 		width: 40%;
-		//align-items: flex-start;
+		align-items: flex-start;
 
 		&--tit{
 			display: block;
@@ -154,14 +151,15 @@ body{
 			margin-right: 0;
 		}
 
-		&--caption{
-			margin-bottom: 20px;
+		&--caption,
+		&--star,
+		&--specification{
+			margin-bottom: 25px;
 		}
 
 		&--star{
 			display: flex;
 			font-size: 0;
-			margin-bottom: 20px;
 
 			.list{
 				list-style: none;
@@ -176,17 +174,13 @@ body{
 				display: block;
 				text-decoration: none;
 				color: #93969b;
-				font-size: 14px;
+				font-size: 10px;
 			}
 
 			.yellow{
 				color: #f7bf16;
 			}
 
-		}
-
-		&--specification{
-			margin-bottom: 20px;
 		}
 
 		&--size-label, &--qty-label{
@@ -214,14 +208,11 @@ body{
 			padding: 10px;
 			width: 70px;
 			appearance: none; 
-				// background: url("../img/Rectangle.png") 90% / 15% no-repeat;
-				// background-size: 12px;
 			}
 
 			select:hover{
 				cursor: pointer;
 			}
-
 
 			&--btn{
 				background-color: #202835;

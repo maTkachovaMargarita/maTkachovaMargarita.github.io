@@ -67,9 +67,6 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -77,10 +74,13 @@ body {
 }
 .nike__left {
 	width: 60%;
-	padding: 35px 30px 0;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 20px 40px 0;
 }
 .nike__left--shoes {
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 .nike__left--link {
 	padding-top: 64%;
@@ -126,12 +126,14 @@ body {
 }
 .nike__left .radio-btn__radio:checked + .radio-btn__label {
 	border: 1px solid #7e838b;
-	background-color: curent;
 	width: 10px;
 	height: 10px;
 }
 .nike__right {
 	width: 40%;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 }
 .nike__right--tit {
 	display: block;
@@ -142,15 +144,16 @@ body {
 	margin-bottom: 10px;
 	margin-right: 0;
 }
-.nike__right--caption {
-	margin-bottom: 20px;
+.nike__right--caption,
+.nike__right--star,
+.nike__right--specification {
+	margin-bottom: 25px;
 }
 .nike__right--star {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	font-size: 0;
-	margin-bottom: 20px;
 }
 .nike__right--star .list {
 	list-style: none;
@@ -163,13 +166,10 @@ body {
 	display: block;
 	text-decoration: none;
 	color: #93969b;
-	font-size: 14px;
+	font-size: 10px;
 }
 .nike__right--star .yellow {
 	color: #f7bf16;
-}
-.nike__right--specification {
-	margin-bottom: 20px;
 }
 .nike__right--size-label,
 .nike__right--qty-label {
