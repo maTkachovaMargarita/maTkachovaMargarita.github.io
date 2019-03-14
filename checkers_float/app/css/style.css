@@ -6,8 +6,8 @@
 }
 
 .container {
-	margin: auto;
-	max-width: 700px;
+	margin: 30px auto 0;
+	max-width: 660px;
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -16,6 +16,7 @@
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	    flex-direction: column;
+	text-align: center;
 }
 
 .center {
@@ -32,50 +33,50 @@
 	justify-content: space-between;
 }
 
-.text {
-	font-size: 0;
-}
-.text__list {
-	list-style: none;
-	font-size: 24px;
-	float: left;
-	width: calc(700px / 10);
-	height: 30px;
-	border: 1px solid #000;
-}
-
-.number {
-	font-size: 0;
-}
-.number__list {
-	list-style: none;
-	font-size: 24px;
-	height: calc(700px / 10);
-	width: 30px;
-	border: 1px solid #000;
-}
-
-.checkers {
-	font-size: 0;
-}
-.checkers__list {
-	list-style: none;
-	font-size: 24px;
-}
-.checkers__list:nth-child(even) .checkers__row__list:nth-child(odd) {
-	background-color: #000;
-}
-.checkers__list:nth-child(odd) .checkers__row__list:nth-child(even) {
-	background-color: #000;
-}
+.text,
+.number,
+.checkers,
 .checkers__row {
 	font-size: 0;
 }
-.checkers__row__list {
+
+[class$="list"] {
 	list-style: none;
 	font-size: 24px;
-	width: calc(700px / 10);
-	height: calc(700px / 10);
+}
+
+[class$="list"]:not(.checkers__list) {
 	border: 1px solid #000;
+}
+
+.text__list {
+	float: left;
+	min-width: calc(600px / 8);
+	min-height: 30px;
+	background-color: #777;
+}
+.text__list:first-child,
+.text__list:last-child {
+	min-width: 30px;
+}
+
+.number__list {
+	min-height: calc(600px / 8);
+	min-width: 30px;
+	background-color: #777;
+	padding-top: 25px;
+}
+
+.checkers__list:nth-child(even) .checkers__row__list:nth-child(odd) {
+	background-color: #000;
+}
+
+.checkers__list:nth-child(odd) .checkers__row__list:nth-child(even) {
+	background-color: #000;
+}
+
+.checkers__row__list {
+	min-width: calc(600px / 8);
+	min-height: calc(600px / 8);
 	float: left;
 }
