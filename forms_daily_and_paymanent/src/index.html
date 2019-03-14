@@ -43,51 +43,51 @@
 		</div>
 		<form name="payment-form" action="#" method="post" class="payment-form">
 
-			<label class="payment-form__for-cardNumber">Credit card number
-				<input class="payment-form__cardNumber" type="text" name="cardNumber" maxlength="19" required pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}"></label>
+			<label class="payment-form__for-cardNumber" for="CardNumber">Credit card number</label>
+			<input class="payment-form__cardNumber" type="text" name="cardNumber" id="CardNumber" maxlength="19" required pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}">
 
-				<label class="payment-form__date">Expiration date</label>
-				<label class="payment-form__date-month">
-					<select class="payment-form__month" name="month">
-						<option>Month</option>
-						<option>January</option>
-						<option>February</option>
-						<option>March</option>
-						<option>April</option>
-						<option>May</option>
-						<option>June</option>
-						<option>July</option>
-						<option>August</option>
-						<option>September</option>
-						<option>October</option>
-						<option>November</option>
-						<option>December</option>
-					</select>
-				</label>
+			<label class="payment-form__date">Expiration date</label>
+			<label class="payment-form__date-month" for="month">
+				<select class="payment-form__month" id="month" name="month" required>
+					<option value="">Month</option>
+					<option value="january">January</option>
+					<option value="february">February</option>
+					<option value="march">March</option>
+					<option value="april">April</option>
+					<option value="may">May</option>
+					<option value="june">June</option>
+					<option value="july">July</option>
+					<option value="august">August</option>
+					<option value="september">September</option>
+					<option value="october">October</option>
+					<option value="november">November</option>
+					<option value="december">December</option>
+				</select>
+			</label>
 
-				<label class="payment-form__date-year">
-					<select class="payment-form__year">
-						<option>Year</option>
-						<option>2019</option>
-					</select>
-				</label>
+			<label class="payment-form__date-year" for="year">
+				<select class="payment-form__year" id="year" required>
+					<option value="">Year</option>
+					<option value="2019">2019</option>
+				</select>
+			</label>
 
-				<label class="payment-form__cvv">Credit card number</label>
+			<label class="payment-form__cvv" for="cvv">Credit card number</label>
 
-				<div class="card-verification-value">
-					<input class="payment-form__cardCVV" type="text" name="cardCVV" maxlength="4" required pattern="[0-9]{4}">
-					<p class="payment-form__rede">3 or 4 digits - <a href="#" class="payment-form__rede__caption">view example</a>
-					</p>
-				</div>
+			<div class="card-verification-value">
+				<input class="payment-form__cardCVV" type="text" if="cvv" name="cardCVV" maxlength="4" required pattern="[0-9]{4}">
+				<p class="payment-form__rede">3 or 4 digits - <a href="#" class="payment-form__rede__caption">view example</a>
+				</p>
+			</div>
 
-				<hr>
+			<hr>
 
-				<input type="submit" name="submit" value="Pay"  class="payment-form__btn">	
+			<input type="submit" name="submit" value="Pay"  class="payment-form__btn">	
 
-				<a href="#" class="payment-form__caption">Cancel order</a>
-			</form>
-		</div>
+			<a href="#" class="payment-form__caption">Cancel order</a>
+		</form>
+	</div>
 
-		<script src="js/script.js"></script>
-	</body>
-	</html>
+	<script src="js/script.js"></script>
+</body>
+</html>

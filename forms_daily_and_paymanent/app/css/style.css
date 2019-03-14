@@ -159,6 +159,7 @@ body {
 .payment-form__date,
 .payment-form__cvv {
 	width: 100%;
+	margin-bottom: 5px;
 }
 .payment-form__for-cardNumber {
 	position: relative;
@@ -176,10 +177,6 @@ body {
 }
 .payment-form__for-cardNumber:hover::after {
 	opacity: 1;
-}
-.payment-form__date,
-.payment-form__cvv {
-	margin-bottom: 5px;
 }
 .payment-form__cardNumber,
 .payment-form__btn {

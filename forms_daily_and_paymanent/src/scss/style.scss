@@ -143,6 +143,7 @@ body{
 	&__date,
 	&__cvv{
 		width: 100%;
+		margin-bottom: 5px;
 	}
 
 	&__for-cardNumber{
@@ -164,12 +165,7 @@ body{
 			opacity: 1;
 		}
 	}
-
-	&__date,
-	&__cvv{
-		margin-bottom: 5px;
-	}
-
+	
 	&__cardNumber,
 	&__btn
 	{

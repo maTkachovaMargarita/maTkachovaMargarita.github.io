@@ -1,0 +1,81 @@
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	margin: auto;
+	max-width: 700px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+}
+
+.center {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.text {
+	font-size: 0;
+}
+.text__list {
+	list-style: none;
+	font-size: 24px;
+	float: left;
+	width: calc(700px / 10);
+	height: 30px;
+	border: 1px solid #000;
+}
+
+.number {
+	font-size: 0;
+}
+.number__list {
+	list-style: none;
+	font-size: 24px;
+	height: calc(700px / 10);
+	width: 30px;
+	border: 1px solid #000;
+}
+
+.checkers {
+	font-size: 0;
+}
+.checkers__list {
+	list-style: none;
+	font-size: 24px;
+}
+.checkers__list:nth-child(even) .checkers__row__list:nth-child(odd) {
+	background-color: #000;
+}
+.checkers__list:nth-child(odd) .checkers__row__list:nth-child(even) {
+	background-color: #000;
+}
+.checkers__row {
+	font-size: 0;
+}
+.checkers__row__list {
+	list-style: none;
+	font-size: 24px;
+	width: calc(700px / 10);
+	height: calc(700px / 10);
+	border: 1px solid #000;
+	float: left;
+}
