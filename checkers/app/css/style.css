@@ -1,0 +1,123 @@
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+.container {
+	margin: 30px auto 0;
+	max-width: 660px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.text,
+.number {
+	font-size: 0;
+	position: absolute;
+}
+
+[class$="list"],
+.text__list {
+	list-style: none;
+	font-size: 24px;
+	border: 1px solid #000;
+}
+
+.text__list {
+	position: absolute;
+	min-width: calc(600px / 8);
+	min-height: 30px;
+	background-color: #777;
+}
+.text__list:first-child,
+.text__list:last-child {
+	min-width: 30px;
+}
+
+.top {
+	top: 0;
+}
+
+.bottom {
+	top: 630px;
+}
+
+.number__list {
+	height: calc(600px / 8);
+	min-width: 30px;
+	background-color: #777;
+	padding-top: 25px;
+}
+
+.left {
+	left: 0;
+	top: 30px;
+}
+
+.right {
+	right: 0;
+	top: 30px;
+}
+
+.checkers {
+	position: absolute;
+	top: 30px;
+}
+.checkers__list {
+	min-width: calc(600px / 8);
+	min-height: calc(600px / 8);
+}
+.checkers:nth-child(even) .checkers__list:nth-child(odd) {
+	background-color: #000;
+}
+.checkers:nth-child(odd) .checkers__list:nth-child(even) {
+	background-color: #000;
+}
+
+.row0 {
+	left: 0;
+}
+
+.row1 {
+	left: 30px;
+}
+
+.row2 {
+	left: calc((600px / 8) + 30px);
+}
+
+.row3 {
+	left: calc(((600px / 8) * 2) + 30px);
+}
+
+.row4 {
+	left: calc(((600px / 8) * 3) + 30px);
+}
+
+.row5 {
+	left: calc(((600px / 8) * 4) + 30px);
+}
+
+.row6 {
+	left: calc(((600px / 8) * 5) + 30px);
+}
+
+.row7 {
+	left: calc(((600px / 8) * 6) + 30px);
+}
+
+.row8 {
+	left: calc(((600px / 8) * 7) + 30px);
+}
+
+.row9 {
+	left: calc(((600px / 8) * 8) + 30px);
+}
