@@ -75,72 +75,141 @@ html,body{
 .contant{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-bottom: 40px;
 }
+
+[class$="carusel"]{
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	background-color: #fff;
+	min-width: 50px;
+	min-height: 50px;
+	z-index: 0;
+
+	&:hover{
+		background-color: $yellow;
+		cursor: pointer;
+		transition: background-color .4s ease;
+	}
+}
+
+.right-carusel::before, .left-carusel::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(50% - 8px);
+	width: 15px;
+	height: 15px;
+	border:2px solid $yellow;
+	z-index: 1;
+	transition: all .4s ease;
+}
+
+.right-carusel::before{
+	transform: rotate(-45deg);
+	right: 20px;
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.left-carusel::before{
+	transform: rotate(-45deg);
+	left: 20px;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.right-carusel:hover::before, .left-carusel:hover::before{
+	border:2px solid $dark-grey;
+	cursor: pointer;
+	transition: all .4s ease;
+}
+
+.right-carusel:hover::before{
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.left-carusel:hover::before{
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
 
 .left,
 .right{
 	width: 50%;
 	padding: 75px 83px;
-	position: relative;
 }
 
-.right::after, .left::after{
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	border-radius: 50%;
-	background-color: $yellow;
-	width: 50px;
-	height: 50px;
-	z-index: 0;
-	opacity: 0;
-}
+// .right::after, .left::after{
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: 50%;
+// 	border-radius: 50%;
+// 	background-color: $yellow;
+// 	width: 50px;
+// 	height: 50px;
+// 	z-index: 0;
+// 	opacity: 0;
+// }
 
-.right::after{
-	right: 0;
-}
+// .right::after{
+// 	right: 0;
+// }
 
-.left::after{
-	left: 0;
-}
+// .left::after{
+// 	left: 0;
+// }
 
-.right:hover::after, .left:hover::after{
-	opacity: 1;
-	cursor: pointer;
-	transition: opacity .2s ease;
-}
+// .right:hover::after, .left:hover::after{
+// 	opacity: 1;
+// 	cursor: pointer;
+// 	transition: opacity .2s ease;
+// }
 
-.right::before, .left::before{
-	content: "";
-	display: block;
-	position: absolute;
-	top: calc(50% + 15px);
-	width: 15px;
-	height: 15px;
-	border:2px solid $yellow;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	z-index: 1;
-}
+// .right::before, .left::before{
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: calc(50% + 15px);
+// 	width: 15px;
+// 	height: 15px;
+// 	border:2px solid $yellow;
+// 	z-index: 1;
+// }
 
-.right::before{
-	transform: rotate(-45deg);
-	right: 20px;
-}
+// .right::before{
+// 	transform: rotate(-45deg);
+// 	right: 20px;
+// 	border-left-color: transparent;
+// 	border-top-color: transparent;
+// }
 
-.left::before{
-	transform: rotate(125deg);
-	left: 20px;
-}
+// .left::before{
+// 	transform: rotate(-45deg);
+// 	left: 20px;
+// 	border-right-color: transparent;
+// 	border-bottom-color: transparent;
+// }
 
-.right:hover::before, .left:hover::before{
-	border:2px solid $dark-grey;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	cursor: pointer;
-}
+// .right:hover::before, .left:hover::before{
+// 	border:2px solid $dark-grey;
+// 	cursor: pointer;
+// }
+
+// .right:hover::before{
+// 	border-left-color: transparent;
+// 	border-top-color: transparent;
+// }
+
+// .left:hover::before{
+// 	border-right-color: transparent;
+// 	border-bottom-color: transparent;
+// }
 
 .left{
 	
@@ -180,7 +249,7 @@ html,body{
 		border: 1px solid $yellow;
 		position: relative;
 		z-index: 1;
-		padding-top: 347.5px;
+		padding-top: 100%;
 	}
 
 	&__image{
@@ -339,14 +408,18 @@ html,body{
 		width: 10px;
 		height: 10px;
 		border: 2px solid $yellow;
-		background-color: #fff;
+		background-color: $yellow;
 		border-radius: 50%;
 		text-decoration: none;
 
 		&:hover{
-			background-color: $yellow;
+			background-color: #fff;
 			transition: background-color .2s ease;
 		}
+	}
+
+	.active{
+		background-color: #fff;
 	}
 }
 

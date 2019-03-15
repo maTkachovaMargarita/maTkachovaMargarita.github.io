@@ -82,78 +82,80 @@ body {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	margin-bottom: 40px;
+}
+
+[class$="carusel"] {
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	background-color: #fff;
+	min-width: 50px;
+	min-height: 50px;
+	z-index: 0;
+}
+[class$="carusel"]:hover {
+	background-color: #fc0;
+	cursor: pointer;
+	-webkit-transition: background-color .4s ease;
+	        transition: background-color .4s ease;
+}
+
+.right-carusel::before,
+.left-carusel::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(50% - 8px);
+	width: 15px;
+	height: 15px;
+	border: 2px solid #fc0;
+	z-index: 1;
+	-webkit-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+
+.right-carusel::before {
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	right: 20px;
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.left-carusel::before {
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	left: 20px;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.right-carusel:hover::before,
+.left-carusel:hover::before {
+	border: 2px solid #333;
+	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+
+.right-carusel:hover::before {
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+
+.left-carusel:hover::before {
+	border-right-color: transparent;
+	border-bottom-color: transparent;
 }
 
 .left,
 .right {
 	width: 50%;
 	padding: 75px 83px;
-	position: relative;
-}
-
-.right::after,
-.left::after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	border-radius: 50%;
-	background-color: #fc0;
-	width: 50px;
-	height: 50px;
-	z-index: 0;
-	opacity: 0;
-}
-
-.right::after {
-	right: 0;
-}
-
-.left::after {
-	left: 0;
-}
-
-.right:hover::after,
-.left:hover::after {
-	opacity: 1;
-	cursor: pointer;
-	-webkit-transition: opacity .2s ease;
-	        transition: opacity .2s ease;
-}
-
-.right::before,
-.left::before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: calc(50% + 15px);
-	width: 15px;
-	height: 15px;
-	border: 2px solid #fc0;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	z-index: 1;
-}
-
-.right::before {
-	-webkit-transform: rotate(-45deg);
-	        transform: rotate(-45deg);
-	right: 20px;
-}
-
-.left::before {
-	-webkit-transform: rotate(125deg);
-	        transform: rotate(125deg);
-	left: 20px;
-}
-
-.right:hover::before,
-.left:hover::before {
-	border: 2px solid #333;
-	border-left-color: transparent;
-	border-top-color: transparent;
-	cursor: pointer;
 }
 
 .left__frame {
@@ -191,7 +193,7 @@ body {
 	border: 1px solid #fc0;
 	position: relative;
 	z-index: 1;
-	padding-top: 347.5px;
+	padding-top: 100%;
 }
 
 .left__image {
@@ -363,12 +365,15 @@ body {
 	width: 10px;
 	height: 10px;
 	border: 2px solid #fc0;
-	background-color: #fff;
+	background-color: #fc0;
 	border-radius: 50%;
 	text-decoration: none;
 }
 .circle__link:hover {
-	background-color: #fc0;
+	background-color: #fff;
 	-webkit-transition: background-color .2s ease;
 	        transition: background-color .2s ease;
+}
+.circle .active {
+	background-color: #fff;
 }
