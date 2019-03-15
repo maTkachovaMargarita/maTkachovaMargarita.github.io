@@ -11,6 +11,7 @@ html, body{
 .container{
 	margin: 30px auto 0;
 	max-width: 660px;
+	min-height: 660px;
 	width: 100%;
 	text-align: center;
 	position: relative;
@@ -30,6 +31,8 @@ html, body{
 }
 
 .text{
+	width: 100%;
+	min-height: 30px;
 
 	&__list{
 		position: absolute;
@@ -71,7 +74,6 @@ html, body{
 	right: 0;
 	top: 30px;
 }
-
 
 .checkers{
 	position: absolute;
