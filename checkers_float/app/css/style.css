@@ -33,6 +33,12 @@
 	justify-content: space-between;
 }
 
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .text,
 .number,
 .checkers,

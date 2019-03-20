@@ -1,0 +1,251 @@
+@import "vars";
+
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	min-height: 100vh;
+}
+
+body{
+	font-family: $main-font;
+	font-size: $base-size;
+	color: $black-text;
+	background-color: $violet;
+}
+
+.container{
+	width: 100%;
+	max-width: $container-width;
+	margin: auto;
+}
+.row{
+	display: flex;
+	min-height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.body-wrapper{
+	overflow: hidden;
+}
+
+.pricing{
+	&__card{ 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $white;
+		background-color: $light-grey;
+		flex-basis: 320px;
+		transition: all .2s ease;
+		box-shadow: 0 0 15px 5px rgba($black, .5);
+		position: relative;
+
+		&:hover{
+
+		}
+
+		& > *{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&-header{
+			padding: 30px 0;
+		}
+
+		.price{
+			font-size: $huge-size;
+			margin-bottom: 15px;
+
+			&__currensy-simbol{
+				top: -1.5em;
+			}
+
+			&__currensy-simbol,
+			&__currensy{
+				font-size: $midle-size;
+			}
+		}
+
+		.title{
+			font-size: $large-size;
+			font-weight: bold;
+			text-transform: uppercase;
+
+		}
+
+		&-body{
+			width: 100%;
+			background-color: $white;
+			padding: 30px 0 60px;
+			border-top-left-radius: 50%;
+			border-top-right-radius: 50%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			.icon{
+				$size:30px;
+				width: $size;
+				height: $size;
+				margin-bottom: 30px;
+			}
+
+			.list{
+
+				&__item{
+					list-style: none;
+				}
+
+				&__item:not(:last-child){
+					margin-bottom: 30px;
+				}
+
+				&__link{
+					color: $black-text;
+					text-decoration: none;
+					transition: color .2s ease;
+
+					&:hover{
+						color: $pink;
+					}
+				}
+			}
+		}
+
+		&-footer{
+			padding: 30px 0;
+			position: relative;
+		}
+
+		.discount{
+			font-size: $small-size;
+			color: $light-text;
+		}
+
+		.btn{
+			background-color: $aqua;
+			color: $white;
+			text-transform: uppercase;
+			font-size: $midle-size;
+			border: none;
+			border-radius: 25px;
+			padding: 15px 0;
+			width: 100%;
+			max-width: 60%;
+			font-family: $bold;
+			letter-spacing: 2px;
+			position: absolute;
+			transform: translateY(30%);
+			transition: all .2s ease;
+		}
+
+		&:nth-child(2){
+			flex-basis: 360px;
+
+			.pricing__card-header{
+				padding: 45px 0;
+				position: relative;
+			}
+
+			.pricing__card-body{
+				width: 160%;
+			}
+
+
+			.pricing__card-footer{
+				padding: 40px 0;
+			}
+
+			.icon{
+				margin-bottom: 50px;
+			}
+
+			.btn{
+
+				background-color: $pink;
+				transform: translateY(-125%);
+			}
+			
+
+			
+		}
+	}
+
+	.banner{
+		$position: 20px;
+		color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: $bold;
+		text-transform: uppercase;
+		@include circle(45px);
+		font-size: $large-size;
+		cursor: pointer;
+		top: $position;
+		right: $position;
+
+		&::before,
+		&::after{
+			content: "";
+			
+		}
+
+		&::before{
+			@include circle(12px);
+			$position: -8px;
+			top: $position;
+			right: $position;
+		}
+
+		&::after{
+			@include circle(4px);
+			$position: -13px;
+			top: $position;
+			right: $position;
+		}
+
+
+		.toltip{
+			display: flex;
+			opacity: 0;
+			background-color: $dark;
+			border-radius: 25px;
+			font-size: 1rem;
+			display: flex;justify-content: center;
+			align-items: center;
+			min-height: 25px;
+			min-width: 90px;
+			position: absolute;
+			right: 0;
+			transform: translateX(120%);
+			z-index: 100;
+			letter-spacing: 2px;
+
+			&::before{
+				content: "";
+				border: 12px solid transparent;
+				border-right-color: $dark;
+				position: absolute;
+				left: 0;
+				transform: translateX(-15px);
+			}
+
+
+
+		}
+
+		&:hover{
+			.toltip{
+				opacity: 1;
+				
+			}
+		}
+	}
+}
