@@ -1,0 +1,20 @@
+//colors
+$body-color: #e2e7ec;
+$white: #fff;
+$black: #000;
+$dark-grey: #1d1c1c;
+$grey: #818181;
+$lite-grey: #99a5b0;
+
+//fonts
+@font-face {
+	font-family: "HansKendrick-Regular", sans-serif;
+	src: url("../fonts/HansKendrick-Regular.otf") format("OpenType");
+}
+
+$font: "HansKendrick-Regular", sans-serif;
+
+//sizes
+$base-size: 13px;
+$tit-size: 30px;
+$caption-size: 22px;
