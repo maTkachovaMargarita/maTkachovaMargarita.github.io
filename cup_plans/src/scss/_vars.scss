@@ -1,0 +1,29 @@
+//colors
+$body-color: #fdde7e;
+$white: #fff;
+$black: #000;
+$title-color: #02995b;
+$dark-grey: #333;
+$grey: #4e4e4e;
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+@font-face {
+	font-family: "Miso";
+	src: url("../fonts/miso.otf") format("OpenType");
+}
+
+@font-face {
+	font-family: "Miso Bold";
+	src: url("../fonts/MISO-BOL.OTF") format("OpenType");
+}
+
+$lato-font: 'Lato', sans-serif;
+$miso-font: 'Miso', sans-serif;
+$miso-bold: 'Miso Bold', sans-serif;
+
+//sizes
+$base-size: 20px;
+$caption-size: 56px;
+$tit-size: 70px;

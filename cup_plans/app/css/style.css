@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+@font-face {
+	font-family: "Miso";
+	src: url("../fonts/miso.otf") format("OpenType");
+}
+
+@font-face {
+	font-family: "Miso Bold";
+	src: url("../fonts/MISO-BOL.OTF") format("OpenType");
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	background-color: #fdde7e;
+}
+
+.container {
+	width: 100%;
+	max-width: 1220px;
+	margin: auto;
+}
+
+.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.cup-plans__card {
+	background-color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-preferred-size: 385px;
+	flex-basis: 385px;
+	border-radius: 5px;
+	-webkit-box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, .5), 1px -1px 5px 1px rgba(255, 255, 255, .5);
+	        box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, .5), 1px -1px 5px 1px rgba(255, 255, 255, .5);
+	padding: 40px 0;
+}
+
+.cup-plans__price {
+	font-family: "Miso Bold", sans-serif;
+	font-size: 70px;
+	font-weight: 700;
+	color: #02995b;
+	margin-bottom: 20px;
+}
+
+.cup-plans__image {
+	margin-bottom: 30px;
+}
+
+.cup-plans__tit {
+	font-family: "Miso", sans-serif;
+	font-size: 56px;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.cup-plans__text {
+	display: block;
+	max-width: 40%;
+	text-align: center;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #4e4e4e;
+}
+
+.cup-plans__card:nth-child(2) {
+	padding: 60px 0;
+}
+.cup-plans__card:nth-child(2) .cup-plans__price {
+	margin-bottom: 40px;
+}
+.cup-plans__card:nth-child(2) .cup-plans__image {
+	margin-bottom: 40px;
+}
