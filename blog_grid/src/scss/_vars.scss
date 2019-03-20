@@ -4,12 +4,13 @@ $white: #fff;
 $black: #000;
 $dark-grey: #1d1c1c;
 $grey: #818181;
-$lite-grey: #99a5b0;
+$lite-grey: #dad2b6;
+$loading: #99a5b0;
 
 //fonts
 @font-face {
-	font-family: "HansKendrick-Regular", sans-serif;
-	src: url("../fonts/HansKendrick-Regular.otf") format("OpenType");
+	font-family: 'HansKendrick-Regular';
+	src: local('HansKendrick-Regular'), url('https://nomail.com.ua/files/woff/215d663ec607e25b1aac95fe9b0a5e72.woff') format('woff');
 }
 
 $font: "HansKendrick-Regular", sans-serif;
@@ -17,4 +18,4 @@ $font: "HansKendrick-Regular", sans-serif;
 //sizes
 $base-size: 13px;
 $tit-size: 30px;
-$caption-size: 22px;
+$caption-size: 20px;

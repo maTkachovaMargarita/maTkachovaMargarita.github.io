@@ -12,6 +12,8 @@ html,body{
 
 body{
 	background-color: $body-color;
+	font-family: $font;
+	font-size: $base-size;
 }
 
 .container{
@@ -20,23 +22,152 @@ body{
 	margin: auto;
 	display: flex;
 	flex-direction: column;
+	padding: 50px 0;
+	text-transform: uppercase;
 }
 
 .row{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	min-height: 100vh;
+	min-height: 540px;
+	margin-bottom: 20px;
 }
 
 [class$="link"]{
 	display: flex;
 	flex-direction: column;
 	background-color: $white;
+	text-decoration: none;
 }
 
 .blog{
 	&__big{
+
+		flex-grow: 3;
+		flex-basis: 740px;
+		margin-right: 20px;
+
+		&--link{
+			position: relative;
+			padding-top: 73%;
+		}
+		
+		&--image{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--forText{
+			position: absolute;
+			bottom: 40px;
+			left: 40px;
+			width: 70%;
+		}
+		
+		&--text{
+			color: $lite-grey;
+			margin-bottom: 20px;
+		}
+
+		&--tit{
+			color: $white;
+			font-weight: 500;
+			font-size: $tit-size;
+			margin: 0;
+		}
+	}
+
+	&__small{
+		flex-grow: 1;
+		flex-basis: 360px;
+
+		&--forImage{
+			position: relative;
+			padding-top: 69%;
+		}
+
+		&--image{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--forText{
+			padding: 25px;
+		}
+
+		&--text{
+			margin-bottom: 25px;
+			font-weight: 300;
+			color: $grey;
+		}
+
+		&--caption{
+			font-size: $caption-size;
+			font-weight: 500;
+			color: $dark-grey;
+			margin-bottom: 65px;
+			line-height: 1.3em;
+		}
+
+		&--avtor{
+			display: block;
+			width: 30%;
+		}
+
+		&--avtorImg{
+			border-radius: 50%;
+		}
+
+	}
+
+	&__big:hover,
+	&__small:hover{
+		opacity: .8;
+		transition: opacity .2s ease;
+	}
+
+	.row:nth-child(2) > &__small:not(:last-child){
+		margin-right: 20px;
+	}
+
+	.row:nth-child(2) &__small:nth-child(2){
+		.blog__small--text{
+			opacity: 0;
+		}
+	}
+
+	.row:nth-child(2) {
+		margin-bottom: 75px;
+	}
+
+	.loading{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__image{
+			margin-right: 10px;
+		}
+
+		&__text{
+			color: $loading;
+			font-size: $base-size;
+			font-weight: 800;
+		}
 
 	}
 }
