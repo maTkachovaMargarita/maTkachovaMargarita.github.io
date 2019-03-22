@@ -22,7 +22,6 @@ body{
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	padding: 50px 0;
 	text-transform: uppercase;
 }
 
@@ -42,6 +41,8 @@ body{
 }
 
 .blog{
+	padding: 50px 0;
+
 	&__big{
 
 		flex-grow: 3;
@@ -72,6 +73,7 @@ body{
 		}
 		
 		&--text{
+			display: inline-flex;
 			color: $lite-grey;
 			margin-bottom: 20px;
 		}
@@ -109,6 +111,7 @@ body{
 		}
 
 		&--text{
+			display: inline-flex;
 			margin-bottom: 25px;
 			font-weight: 300;
 			color: $grey;
@@ -123,8 +126,7 @@ body{
 		}
 
 		&--avtor{
-			display: block;
-			width: 30%;
+			display: inline-flex;
 		}
 
 		&--avtorImg{
