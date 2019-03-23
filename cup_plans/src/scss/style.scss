@@ -16,7 +16,7 @@ body{
 
 .container{
 	width: 100%;
-	max-width: 1220px;
+	max-width: 1140px;
 	margin: auto;
 }
 
@@ -30,14 +30,15 @@ body{
 .cup-plans{
 	&__card{
 		background-color: $white;
+		min-height: 440px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		flex-basis: 385px;
+		flex-basis: 360px;
 		border-radius: 5px;
 		box-shadow: -1px 1px 5px 1px rgba($black, .5),
 		1px -1px 5px 1px rgba($white, .5);
-		padding: 40px 0;
+		padding: 30px 0;
 	}
 
 	&__price{
@@ -45,13 +46,11 @@ body{
 		font-size: $tit-size;
 		font-weight: 700;
 		color: $title-color;
-		margin-bottom: 20px;
-		flex-grow: 2;
+		flex-grow: 1;
 	}
 
 	&__image{
-		margin-bottom: 30px;
-		flex-grow: 2;
+		flex-grow: 3;
 	}
 
 	&__tit{
@@ -59,9 +58,9 @@ body{
 		font-size: $caption-size;
 		font-weight: 400;
 		color: $dark-grey;
-		margin-bottom: 20px;
-		flex-grow: 1;
+		flex-grow: 2;
 	}
+	
 
 	&__text{
 		display: block;
@@ -71,18 +70,15 @@ body{
 		font-size: $base-size;
 		font-weight: 300;
 		color: $grey;
-		flex-grow: 3;
+		flex-grow: 1;
 	}
 
 	&__card:nth-child(2){
-		padding: 60px 0;
+		padding: 40px 0;
+		min-height: 500px;
 
 		.cup-plans__price{
-			margin-bottom: 40px;
-		}
-
-		.cup-plans__image{
-			margin-bottom: 40px;
+			flex-grow: 2;
 		}
 
 	}
