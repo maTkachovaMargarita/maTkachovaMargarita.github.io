@@ -1,0 +1,41 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.playlist{
+	 width: 100%;
+	max-width: 50%;
+	padding: 25px;
+	color: black;
+	background-color: red;
+	margin: 20px auto;
+	font-size: 20px;
+}
+
+[type="button"]{
+	width: 30%;
+	padding: 15px;
+	font-size: 20px;
+	border-radius: 15px;
+	background-color: #e1ff12;
+	color: red;
+}
+
+.title{
+	text-align: center;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.list{
+	font-weight: 900;
+	padding-bottom: 15px;
+
+}
+
+.song{
+	font-style: italic;
+	font-weight: 400;
+}
