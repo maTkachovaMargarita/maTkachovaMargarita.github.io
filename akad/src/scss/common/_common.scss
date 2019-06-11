@@ -14,7 +14,7 @@ a {
 	@include transition(color);
 
 	&:hover {
-		text-decoration: none;		
+		text-decoration: none;
 		color: $corp-green;
 	}
 }

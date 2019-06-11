@@ -1,0 +1,85 @@
+.about{
+	background-color: $lite-grey;
+	padding: px_to_rem(120px) 0;
+
+	@media all and (max-width: 992px){
+		padding: px_to_rem(60px) 0;
+	}
+
+	@media all and (max-width: 768px){
+		padding: px_to_rem(30px) 0;
+	}
+
+	&__wrapper-image{
+		background-color: $violet;
+		@include padding-hack(139%);
+
+	}
+
+	&__image{
+
+	}
+
+	&__wrapper-title{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		@include wrapper-title;
+	}
+
+	&__svg{
+		margin-bottom: px_to_rem(30px)
+	}
+
+	&__title{
+		@include title;
+		margin-bottom: 0;
+	}
+
+	&__for-content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-family: $secondary-font;
+		font-size: $menu-size;
+
+		@media all and (max-width: 1200px){
+			font-size: $middle-size;
+		}
+
+		@media all and (max-width: 992px){
+			font-size: $small-size;
+		}
+
+	}
+
+	&__for-text{
+		padding-top: px_to_rem(70px);
+		margin-bottom: px_to_rem(90px);
+
+		@media all and (max-width: 1200px){
+			padding-top: px_to_rem(50px);
+			margin-bottom: px_to_rem(50px);
+		}
+
+		@media all and (max-width: 992px){
+			padding-top: px_to_rem(0);
+			margin-bottom: px_to_rem(10px);
+		}
+
+		@media all and (max-width: 768px){
+			text-align: justify;
+			padding: 0 px_to_rem(10px);
+		}
+	}
+
+	&__text{
+		color: $dark-text-color;
+	}
+
+	&__btn{
+		@include btn($btn-color, $white, $lite-violet);
+	}
+}

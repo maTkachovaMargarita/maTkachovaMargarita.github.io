@@ -1,8 +1,8 @@
 .portfolio {
 	padding: 65px 0 75px;
 
-	@media all and (min-width: 1200px){
-		padding: 135px 0 150px;
+	@media all and (min-width: 1200px) {
+		padding: 135px 0 150px;	
 	}
 	
 
@@ -14,8 +14,8 @@
 		text-align: center;
 		line-height: 1.5;
 
-		@media all and (min-width: 1200px){
-			text-align: left;
+		@media all and (min-width: 1200px) {
+			text-align: left;	
 		}
 		
 
@@ -25,14 +25,15 @@
 	}
 
 	&-category__list {
+		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
 		justify-content: center;
 		padding: 0;
 		list-style: none;
 
-		@media all and (min-width: 1200px){
+
+		@media all and (min-width: 1200px) {
 			display: block;
 		}
 		
@@ -61,54 +62,39 @@
 	}
 }
 
- .grid {
- 	width: 100%;
+// .grid {
+// 	width: 100%;
 // 	display: flex;
 // 	flex-wrap: wrap;
 // 	justify-content: space-between;
- }
+// }
 
-.grid-item {
+// .img-wrapper {
+// 	max-width: 260px;
+// }
+
+.dynamic-grid__item {
+	width: 100%;
 	border-radius: 15px;
-	max-width: 260px;
+	max-width: 31%;
 	margin-bottom: 20px;
 	@include transition;
-
-@media all and (max-width: 575px){
-		max-width: 130px;
-	}
 
 	&:hover {
 		box-shadow: 0 0 10px 3px rgba($black, .1);
 	}
 
-	&:nth-last-child(-n+3){
-		margin-bottom: 0;
-	}
+	// &:nth-last-child(-n+3){
+	// 	margin-bottom: 0;
+	// }
 
 	& > img {
 		width: 100%;
 	}
 
-	// @media all and (max-width: 575px){
-	// 	&:nth-last-child(-n+6){
+	// @media all and (max-width: 575px) {
+	// 	&:nth-last-child(-n+6) {
 	// 		display: none;
 	// 	}
 	// }
-	// position: relative;
-	// align-self: flex-start;
 }
-
-
-// .test{
-// 	--color: red;
-// 	$size: 500px;
-// 	width: $size;
-// 	height: $size;
-// 	margin: auto;
-// 	background-color: var(--color);
-
-// 	&:hover{
-// 		--color: blue;
-// 	}
-// }

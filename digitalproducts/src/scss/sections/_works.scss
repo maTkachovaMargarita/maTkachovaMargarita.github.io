@@ -1,0 +1,54 @@
+.works{
+	background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%), url("#{$img-path}/works-bg.jpg") no-repeat;
+	background-size: cover;
+	color: $white;
+	padding-bottom: px_to_rem(60px);
+
+	@media all and (max-width: 768px){
+		padding-bottom: px_to_rem(30px);
+	}
+
+	&__wrapper-title{
+		@include wrapper-title;
+
+		@media all and (max-width: 768px){
+			padding: px_to_rem(30px);
+		}
+	}
+
+	&__svg{
+		margin-bottom: px_to_rem(30px);
+	}
+
+	&__title{
+		@include title;
+	}
+
+	&__wrapper-image{
+		@include padding-hack(77%);
+		margin-bottom: px_to_rem(20px);
+	}
+
+	&__for-btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__btn{
+		@include btn($white, $btn-color, $lite-grey);
+	}
+
+	&__slider .owl-dot.active span{
+		background-color: $white!important;
+	}
+
+	&__slider .owl-dot span{
+		background-color: transparent!important;
+		border: 1px solid $white;
+	}
+
+	&__slider .owl-dots{
+		margin-bottom: px_to_rem(30px);
+	}
+}

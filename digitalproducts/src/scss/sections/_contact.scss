@@ -1,0 +1,147 @@
+.contact{
+	background-color: rgba($violet, .7);
+	// background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%);
+	position: relative;
+	padding-bottom: px_to_rem(50px);
+
+	@media all and (max-width: 768px){
+		padding-bottom: px_to_rem(30px);
+	}
+
+	#map{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		pointer-events: all;
+		max-height: 900px;
+		max-width: 900px;
+	}
+
+	&__wrapper-title{
+		@include wrapper-title;
+
+		@media all and (max-width: 768px){
+		padding: px_to_rem(30px);
+	}
+	}
+
+	&__title{
+		@include title;
+	}
+
+	&__svg{
+		margin-bottom: px_to_rem(30px);
+	}
+
+	&__form{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		pointer-events: all;
+		width: 100%;
+	}
+
+	&__wrapper-inform{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: px_to_rem(25px);
+		width: 100%;
+		color: $dark-text-color;
+	}
+
+	&__name, &__e-mail, &__message{
+		background-color: rgba($form-lite-grey, .5);
+		border: none;
+		padding: px_to_rem(20px) px_to_rem(10px);
+		border-radius: px_to_rem(5px);
+		font-style: italic;
+
+		&::-webkit-input-placeholder {color:$white;}
+		&::-moz-placeholder          {color:$white;}/* Firefox 19+ */
+		&:-moz-placeholder           {color:$white;}/* Firefox 18- */
+		&:-ms-input-placeholder      {color:$white;}
+	}
+
+	&__name, &__e-mail{
+		width: 49%;
+	}
+
+	&__message{
+		width: 100%;
+		margin-bottom: px_to_rem(50px);
+	}
+
+	&__btn{
+		@include btn($white, $lite-violet, $white);
+		background-color: $violet;
+		//border: none;
+		border-radius: px_to_rem(5px);
+		@include title($middle-size);
+		box-shadow: 0 4px 0 $lite-violet;
+		max-width: 30%;
+
+		@media all and (max-width: 768px){
+			max-width: 80%;
+		}
+	}
+
+	&__for-contact{
+		position: relative;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	&__wrapper{
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		max-width: 400px;
+		right: -320px;
+		top:80px;
+		pointer-events: all;
+		transform: translateX(0);
+		transition: transform .2s ease;
+
+		&:first-child{
+			top: 0px;
+		}
+	}
+
+	&__home, &__tel{
+		background-color: $violet;
+		width: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover{
+			cursor: pointer;
+		}
+
+	}
+
+	&__wrapper:hover{
+		transform: translateX(-80%);
+		transition: transform .2s ease;
+	}
+
+	&__adres, &__phone{
+		background-color: rgba($white, .7);
+		padding: px_to_rem(10px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: calc(400px - 80px);
+		height: 100%;
+	}
+
+}

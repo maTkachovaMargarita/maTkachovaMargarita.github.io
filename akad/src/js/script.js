@@ -48,16 +48,13 @@
 });
 
 
-	const $grid = $('.grid');
-	$grid.masonry({
+	
+	$('.dynamic-grid').masonry({
 		percentPosition: true,
 		gutter: 20,
 		horizontalOrder: true,
 		fitWidth: true
 	});
-
-	$grid.masonry('layout');
-
 
 
 
@@ -66,9 +63,15 @@
 function paddingHack(items){
 	const gridWidth = $(items).parent().width();
 
+	console.log(gridWidth);
+
 	function setPadding(){
 		$(items).each(function() {
 			const img = $(this).find('img');
+
+			console.log(img[0].naturalHeight, gridWidth, img[0].naturalHeight / gridWidth * 100);
+
+
 			if(!img[0]) return;
 			$(this).css({
 				// position: 'relative',
@@ -93,13 +96,6 @@ function paddingHack(items){
 	}
 }
 
-const mansoryGridPadHack = paddingHack('.grid-item');
+const mansoryGridPadHack = paddingHack('.dynamic-grid__item');
 
 mansoryGridPadHack.init();
-
-
-$('.test-slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-});

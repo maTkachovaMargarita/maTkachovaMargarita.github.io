@@ -1,0 +1,35 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap');
+$main-font: 'ProximaNova', sans-serif;
+$secondary-font: 'PT Sans', sans-serif;
+
+//COLORS
+$violet: #9f9acf;
+$lite-violet: #b1aed1;
+$grey: #dbdbdb;
+$lite-grey: #ebebeb;
+$form-lite-grey: #d8d6e0;
+$logo-color: #f6f6f6;
+$lite-text-color: #fefefb;
+$dark-text-color: #665f60;
+$btn-color: #7d7a7c;
+$white: #ffffff;
+$black: #000;
+
+
+//SIZE
+$base-size: 18px;
+@function px_to_rem($target, $context: $base-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+$small-size: $base-size;
+$middle-size: px_to_rem(20px);
+$menu-size: px_to_rem(24px);
+$main-subtitle: px_to_rem(30px);
+$section-title: px_to_rem(36px);
+$main-title: px_to_rem(72px);
+
+
+$img-path: "../../img";

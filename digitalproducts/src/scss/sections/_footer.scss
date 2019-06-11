@@ -1,0 +1,21 @@
+.footer{
+	background-color: $violet;
+	padding: px_to_rem(80px);
+	color: $white;
+
+	@media all and (max-width: 768px){
+			padding: px_to_rem(30px);
+		}
+
+	&__copyright{
+		font-family: $secondary-font;
+
+		@media all and (max-width: 768px){
+			text-align: center;
+		}
+	}
+
+	&__social-item{
+		margin-right: px_to_rem(30px);
+	}
+}
