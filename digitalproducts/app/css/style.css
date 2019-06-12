@@ -301,8 +301,8 @@ a:hover {
 }
 
 .header {
-	background: -webkit-gradient(linear, left bottom, left top, from(rgba(182, 180, 215, .5)), color-stop(50%, rgba(181, 178, 215, .5)), to(rgba(176, 173, 208, .5))), url("../../img/bg.jpg") no-repeat;
-	background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%), url("../../img/bg.jpg") no-repeat;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(182, 180, 215, .5)), color-stop(50%, rgba(181, 178, 215, .5)), to(rgba(176, 173, 208, .5))), url("../img/bg.jpg") no-repeat;
+	background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%), url("../img/bg.jpg") no-repeat;
 	background-size: cover;
 	color: #fff;
 }
@@ -477,15 +477,19 @@ a:hover {
 	max-width: 80%;
 	padding: 10px 0;
 	font-style: italic;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 }
 .about__btn:hover {
 	color: #fff;
 	background-color: #b1aed1;
 	border-color: #b1aed1;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 }
 @media all and (min-width: 768px) {
 	.about__btn {
@@ -589,8 +593,8 @@ a:hover {
 }
 
 .works {
-	background: -webkit-gradient(linear, left bottom, left top, from(rgba(182, 180, 215, .5)), color-stop(50%, rgba(181, 178, 215, .5)), to(rgba(176, 173, 208, .5))), url("../../img/works-bg.jpg") no-repeat;
-	background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%), url("../../img/works-bg.jpg") no-repeat;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(182, 180, 215, .5)), color-stop(50%, rgba(181, 178, 215, .5)), to(rgba(176, 173, 208, .5))), url("../img/works-bg.jpg") no-repeat;
+	background: linear-gradient(to top, rgba(182, 180, 215, .5) 0%, rgba(181, 178, 215, .5) 50%, rgba(176, 173, 208, .5) 100%), url("../img/works-bg.jpg") no-repeat;
 	background-size: cover;
 	color: #fff;
 	padding-bottom: 3.33333rem;
@@ -673,15 +677,19 @@ a:hover {
 	max-width: 80%;
 	padding: 10px 0;
 	font-style: italic;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 }
 .works__btn:hover {
 	color: #7d7a7c;
 	background-color: #ebebeb;
 	border-color: #ebebeb;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 }
 @media all and (min-width: 768px) {
 	.works__btn {
@@ -997,8 +1005,10 @@ a:hover {
 	max-width: 80%;
 	padding: 10px 0;
 	font-style: italic;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 	background-color: #9f9acf;
 	border-radius: .27778rem;
 	font-family: "ProximaNova", sans-serif;
@@ -1014,8 +1024,10 @@ a:hover {
 	color: #b1aed1;
 	background-color: #fff;
 	border-color: #fff;
-	-webkit-transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
-	        transition: background-color .2s ease,	color .2s ease, border-color .2s ease;
+	-webkit-transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
+	        transition: background-color .2s ease,
+	color .2s ease, border-color .2s ease;
 }
 @media all and (min-width: 768px) {
 	.contact__btn {
