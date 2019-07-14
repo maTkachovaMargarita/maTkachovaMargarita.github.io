@@ -32,6 +32,7 @@
 			font-size: $main-subtitle;
 			font-style: italic;
 			width: 50%;
+			margin-bottom: 0;
 
 			@media all and (max-width: 768px){
 				font-size: $middle-size;

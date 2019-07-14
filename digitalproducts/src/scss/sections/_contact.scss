@@ -108,6 +108,11 @@
 		&:first-child{
 			top: 0px;
 		}
+
+		@media all and (max-width: 460px){
+			right: 50%;
+			transform: translateX(50%);
+		}
 	}
 
 	&__home, &__tel{

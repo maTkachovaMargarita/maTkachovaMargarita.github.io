@@ -25,24 +25,25 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		margin-bottom: 20px;
+		text-align: center;
 	}
 
 	&__caption-description{
 		font-style: italic;
 		text-align: center;
 		width: 50%;
+		margin-bottom: 0;
 	}
 
-	&__wrapper-image{
-		background: $violet;
-		@include padding-hack(152%, cover);
+	&__for-image{
+		background: $violet url("../img/services-image.png") no-repeat center/cover;
+		position: relative;
 		width: 100%;
 		height: 100%;
 
-	}
-
-	&__image{
-
+		@media all and (max-width: 991px){
+			min-height: 400px;
+		}
 	}
 
 	&__wrapper-title{
@@ -56,6 +57,10 @@
 	&__title{
 		@include title;
 		margin-bottom: px_to_rem(120px);
+
+		@media all and (max-width: 991px){
+			margin-bottom: px_to_rem(50px);
+		}
 	}
 
 	&__blockquote{

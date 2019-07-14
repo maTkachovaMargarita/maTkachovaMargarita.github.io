@@ -73,43 +73,43 @@ a{
 }
 
 [class*="social-menu"]{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-item: center;
-    margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  margin-bottom: 0;
+}
+
+[class*="social-item"]{
+  list-style: none;
+
+  &:last-child{
+    margin-right: 0;
   }
+}
 
- [class*="social-item"]{
-    list-style: none;
+[class*="social-link"]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+  $size: 40px;
+  width: $size;
+  height: $size;
 
-    &:last-child{
-      margin-right: 0;
-    }
+  &:hover{
+    background-color: $lite-grey;
+    transition: background-color .2s ease;
   }
-
-  [class*="social-link"]{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $white;
-    border-radius: 50%;
-    $size: 40px;
-    width: $size;
-    height: $size;
-
-    &:hover{
-      background-color: $lite-grey;
-      transition: background-color .2s ease;
-    }
-  }
+}
 
 .fab{
-    color: $violet;
-    font-size: $menu-size;
-  }
+  color: $violet;
+  font-size: $menu-size;
+}
 
-  .to-top {
+.to-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,11 +137,33 @@ a{
     transform: rotate(135deg);
     position: relative;
     top: 5px;
-  }
 
-  &:hover {
-    transform: scale(1.2);
-  }
+    @media all and (max-width: 576px){
+      $size: 15px;
+     width: $size;
+     height: $size;
+   }
+ }
+
+ &:hover {
+  transform: scale(1.2);
+}
+
+@media all and (max-width: 991px){
+  $size: 50px;
+  width:  $size;
+  height:  $size;
+  bottom: $size;
+  right: $size;
+}
+
+@media all and (max-width: 576px){
+  $size: 35px;
+  width:  $size;
+  height:  $size;
+  bottom: $size;
+  right: $size;
+}
 }
 
 .js-hidden {

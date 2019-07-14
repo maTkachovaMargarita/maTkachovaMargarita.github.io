@@ -9,9 +9,11 @@
 
 	&__copyright{
 		font-family: $secondary-font;
+		margin-bottom: 0;
 
 		@media all and (max-width: 768px){
 			text-align: center;
+			margin-bottom: px_to_rem(20px);
 		}
 	}
 

@@ -1,6 +1,19 @@
 ;(function($){
 	"use strict";
 
+    $(function() {
+        var $page = $('html, body');
+        $('a[href*="#"]').click(function() {
+            $page.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
+            return false;
+        });
+    });
+
+
+
+
 /////////WORKS SLIDER//////////
 $(function () {
 	const owlWorks = $(".works__slider");
@@ -88,11 +101,10 @@ $(function(){
 	});
 });
 
-//////MAP/////////
-
 
 })(jQuery);
 
+//////MAP/////////
 function initMap() {
 
     var map;
