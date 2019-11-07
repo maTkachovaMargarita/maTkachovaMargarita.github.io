@@ -1,0 +1,66 @@
+.footer{
+	background-color: $dark-blue;
+	color: $white;
+	text-align: center;
+	font-weight: 300;
+	padding: 30px 0;
+
+	@media all and (min-width: 768px){
+			padding: 60px 0;
+		}
+
+	&__tagline{
+		font-size: $base-size;
+
+		@media all and (min-width: 768px){
+			font-size: $button-size;
+		}
+
+		@media all and (min-width: 992px){
+			font-size: $section-subtitle;
+		}
+	}
+
+	&__contact{
+		font-size: $small-size;
+		margin-bottom: 0;
+
+		@media all and (min-width: 768px){
+			font-size: $base-size;
+		}
+
+		@media all and (min-width: 992px){
+			font-size: $logo-size;
+		}
+	}
+
+	&__for-btn{
+		display: flex;
+		justify-content: center;
+	}
+
+	&__btn{
+		@include btn($dark-blue, $orange);
+		border: 1px solid $dark-blue;
+		background-color: $white;
+		justify-content: center;
+		border: none;
+		max-width: 80%;
+
+		@media all and (min-width: 430px){
+			max-width: 50%;
+		}
+
+		@media all and (min-width: 578px){
+			max-width: 40%;
+		}
+
+		@media all and (min-width: 992px){
+			max-width: 30%;
+		}
+
+		@media all and (min-width: 1200px){
+			max-width: 20%;
+		}
+	}
+}

@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+*
+	{
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+}
+body
+	{
+		font-family: 'Cabin', sans-serif;
+		font-size: 14px;
+		background-color: #fff;
+        color: #4e4e4e;
+}
+.wrapper
+	{
+		display: flex;
+		width: 100%;
+		max-width: 1600px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: column;
+		margin: auto;
+}
+section
+	{
+		display: flex;
+        flex-wrap: wrap;
+}
+.header, .baner, .services, .content, .gallery, .shares, .profile, .footer
+{
+		display: flex;
+		margin: 5px 0px 0px;
+        flex-direction: row;
+}
+ul
+	{
+		list-style-type: none;
+		display: flex;
+}
+a
+	{
+		text-decoration: none;
+		color: #000;
+}
+/*header*/
+.header
+	{
+		justify-content: space-between;
+        align-items: center;
+		background-color: #fff;
+		z-index: 1;
+		top: 20px;
+		width: 100%;
+		margin: 0px auto;
+}
+
+.header li
+    {
+       margin-right: 10px; 
+        font-weight: 600;
+}
+
+.header li:last-child{
+	margin-right: 0px; 
+}
+.meny li:nth-child(1) a
+    {
+        color: #4376ea;
+}
+/*baner*/
+.for_baner
+    {
+        background-image: url('../img/super.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding-top: 40px;
+        overflow: hidden;
+}
+.baner
+    {
+        position: relative;
+    }
+.baner .left
+	{
+		background-image: url('../img/handphone.png');
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		background-size: contain;
+		width: 50%;
+		height: 649px;
+        flex-grow: 1;
+}
+.baner span
+    {
+        display: none;
+        position: absolute;
+}
+.baner .right
+    {
+        margin-left: 20px;
+        color: #fff;
+        flex-grow: 1;
+}
+.baner .right h1
+    {
+        font-size: 3em;
+}
+.baner .right h4
+	{
+		padding: 20px 0px;
+		font-weight: lighter;
+		color: rgba(255, 255, 255, 0.74);
+		font-size: 1.1em;
+}
+.baner .right a
+	{
+		display: block;
+		width: 200px;
+		margin-top: 20px;
+		background-color: #ff6200;
+}
+/*services*/
+.services
+	{
+		align-items: center;
+		justify-content: space-between;
+}
+.services li
+	{
+	 	flex-basis: 300px;
+		text-align: center;
+		padding: 10px;
+}
+.services div
+	{
+		width: 70px;
+		height: 70px;
+		background-color: #6aa8de;
+		border-radius: 100%;
+		color: #fff;
+		font-size: 40px;
+		text-align: center;
+		padding-top: 10px;
+		margin: 10% 0px 10% 40%;
+}
+.services div:hover
+	{
+		background-color: #fff;
+		color: #f2a6d8;
+		border: solid 5px #f2a6d8;
+		padding-top: 5px;
+}
+.services h4
+	{
+		margin: 10px;
+}
+/*content*/
+.for_content
+	{
+		background-color: #f7f7f7;
+		border-top: solid 2px rgba(235, 235, 235, 150);
+		border-bottom: solid 2px rgba(235, 235, 235, 150);
+}
+.content
+	{ 	
+		flex-wrap: wrap;
+		flex-direction: column;
+		padding: 25px 25px 0px 25px;
+}
+.content h1, .content h4
+	{
+		text-align: center;
+		width: 100%;
+		margin: 10px;
+}
+.content h1
+	{
+		color: #6aa8de;
+		font-size: 2em;
+}
+.model
+	{
+		display: flex;
+		flex-grow: 1;
+		padding: 20px;
+		flex-direction: row;
+		justify-content:center;
+		
+}
+.model div
+	{ 
+		flex-grow: 1;
+		flex-basis: 30%;
+}
+.model h3
+	{
+		color: #6aa8de;
+		margin-top: 100px;
+		margin-bottom: 15px;
+}
+.photo
+	{
+		background-image: url('../img/Iphone_Mockup.png');
+		background-repeat: no-repeat;
+		background-position: center top;
+        background-size: contain;
+		width: 100%;
+		height: 513px;
+		}		
+.model .left
+	{
+		text-align: right;
+}
+/*gallery*/
+.gallery
+	{
+		flex-direction: column;
+		flex-wrap: wrap;
+		padding: 25px;
+}
+.gallery h1, .gallery h4
+	{
+		text-align: center;
+		width: 100%;
+		margin: 10px;
+}
+.gallery h1
+	{
+		color: #6aa8de;
+		font-size: 2em;
+}
+.image
+	{
+		display: flex;
+		flex-grow: 1;
+		padding: 20px;
+		flex-direction: row;
+		justify-content:center;
+		
+}
+.image div
+	{
+		flex-basis: 30%;
+		margin: 5px;
+		
+}
+.image img
+	{
+		width: 100%;
+        margin: 2px;
+}
+/*shares*/
+.for_shares
+	{
+		background-color: #f7f7f7;
+		border-top: solid 2px rgba(235, 235, 235, 150);
+		border-bottom: solid 2px rgba(235, 235, 235, 150);
+}
+.shares
+	{ 	
+		flex-wrap: wrap;
+		flex-direction: column;
+		padding: 25px 25px 0px 25px;
+		text-align: center;
+		width: 100%;
+		margin: 10px;
+}
+.shares>h3
+    {
+        margin: 5px;
+}
+.shares>h4
+    {
+        margin-bottom: 15px;
+        color: #6aa8de;
+}
+.shares span
+	{
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: #bfbfbf;
+		border-radius: 100%;
+		margin-bottom: 15px;
+}
+.shares span:last-child
+	{
+		background-color: #6aa8de;
+}
+.shares ul
+    {
+        flex-grow: 1;
+		padding: 25px;
+		flex-direction: row;
+		justify-content:space-between;
+        border-top: solid 2px rgba(183, 182, 182, 0.66);
+}
+.shares li
+    {
+        flex-basis: 30%;
+        box-shadow: 1px 1px 3px #5d5d5d,
+                    -1px -1px 3px #dddddd;
+        margin: 10px;
+        background-color: #fff;
+}
+.shares li h2
+    {
+        margin-top: 20px;
+}
+.shares li h4
+    {
+        margin: 15px;
+}
+.shares li h3
+    {
+        padding: 10px;
+        background-color: #e5e5e5;
+}
+.shares li p
+    {
+         padding: 15px;
+        margin: 0px 25px;
+}
+.shares .p1, .shares .p2
+    {
+       
+         border-bottom: solid 1px #e5e5e5;
+}
+.shares button
+    {
+        width: 50%;
+        height: 30px;
+        margin-bottom: 25px;
+        border-radius: 3px;
+        font-weight: 600;
+        background-color: #e5e5e5;
+}
+.shares li:nth-child(2)
+    {
+        background-color: #559ede;
+        color: #fff;
+}
+.shares li:nth-child(2) button, .shares li:nth-child(2) h3
+    {
+        background-color: #fff;
+        color: #ff6200;
+}
+.shares button:hover
+	{
+		 background-color: #d6d6d6;
+}
+.shares li:nth-child(2) button:hover
+	{
+		background-color: #f5f5f5;
+}
+/*shares*/
+.for_profile
+	{
+		background-color: #f7f7f7;
+		border-bottom: solid 2px rgba(235, 235, 235, 150);
+}
+.profile
+	{ 	
+		flex-wrap: wrap;
+		flex-direction: column;
+		padding: 25px 25px 0px 25px;
+		width: 100%;
+		margin: 10px;
+}
+.profile h1, .profile h4
+	{
+		text-align: center;
+		margin: 5px;
+}
+.profile h1
+	{
+		color: #6aa8de;
+		font-size: 2em;
+}
+.profile h4
+	{
+		padding-bottom: 25px;
+}
+.profile input
+	{
+		margin-bottom: 10px;
+		height: 30px;
+}
+.profile .formessage
+	{
+		height: 50px;
+}
+.profile p
+	{
+		color: rgba(109, 109, 109, 0.77);
+}
+.profile button
+	{
+		height: 30px;
+		color: #fff;
+		background-color: #6aa8de;
+		font-weight: 600;
+		margin-bottom: 50px;
+}
+.profile button:hover
+	{
+		background-color: #ff6200;
+}
+/*footer*/
+.footer
+	{
+		justify-content: space-between;
+        align-items: center;
+        margin-left: 25px;
+}
+.footer a
+	{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		background-color: #dbdbdb;
+		margin: 0px 20px;
+		text-align: center;
+		color: #fff;
+		padding: 5px;
+}
+.footer a:hover
+	{
+		background-color: #6aa8de;
+}
+
+/*media*/
+@media screen and (max-width:1180px)
+    {
+        .baner .left
+            {
+                width: 100%;
+        }
+        .for_baner
+            {
+                height: 550px;
+        }
+}
+@media screen and (max-width:992px)
+    {
+        
+}
+@media screen and (max-width:910px)
+	{
+		.for_baner
+			{
+				height: 520px;
+		}
+		.baner .left
+			{
+				width: 70%;
+				height: 550px;
+		}
+.baner .right h1
+    {
+        font-size: 2em;
+	    margin-top: 30px;
+}
+.baner .right h4
+	{
+		font-size: 1em;
+}
+.baner .right a
+	{
+		width: 150px;
+}
+		.baner .right img
+			{
+				width: 100%;
+		}	
+}
+@media screen and (max-width:850px)
+    {
+        .for_baner
+			{
+				height: 500px;
+		}
+		.baner .left
+			{
+				width: 100%;
+				height: 550px;
+		}
+        .baner .right
+    {
+       
+	    margin-top: 30px;
+}
+}
+@media screen and (max-width:768px)
+    {
+        .for_baner
+			{
+				height: 450px;
+		}
+		.baner .left
+			{
+				width: 100%;
+				height: 450px;
+		}
+        .baner .right
+    {
+       
+	    margin-top: 30px;
+}
+}
+@media screen and (max-width:680px)
+	{
+		.for_baner
+			{
+				height: 400px;
+		}
+		.baner .left
+			{
+				width: 100%;
+				height: 400px;
+		}
+.baner .right h1
+    {
+        font-size: 1.5em;
+	    margin-top: 30px;
+}
+.baner .right h4
+	{
+		font-size: .7em;
+}
+.baner .right a
+	{
+		width: 100px;
+}
+		.baner .right img
+			{
+				width: 100%;
+		}	
+}
+@media screen and (max-width:560px)
+	{
+		.for_baner
+			{
+				height: 350px;
+		}
+		.baner .left
+			{
+				width: 80%;
+				height: 350px;
+		}
+.baner .right h1
+    {
+        font-size: 1.2em;
+	    margin-top: 30px;
+}
+.baner .right h4
+	{
+		font-size: .5em;
+}
+.baner .right a
+	{
+		width: 100px;
+}
+		.baner .right img
+			{
+				width: 100%;
+		}	
+}
+@media screen and (max-width:480px)
+	{
+		.for_baner
+			{
+				height: 350px;
+		}
+		.baner
+			{
+				flex-direction: column;
+		}
+		.baner .left
+			{
+				width: 100%;
+				height: 550px;
+		}
+.baner .right h1
+    {
+        font-size: 1.2em;
+	    margin-top: 30px;
+}
+.baner .right h4
+	{
+		font-size: .5em;
+}
+.baner .right a
+	{
+		width: 100px;
+}
+		.baner .right img
+			{
+				width: 100%;
+		}	
+}
+

@@ -1,0 +1,76 @@
+//FONTS
+
+$main-font: 'ProximaNova', sans-serif;
+// $bold-font: 'ProximaNova Bold', sans-serif;
+// $light-font: 'ProximaNova Light', sans-serif;
+// $semibold-font: 'ProximaNova SemiBold', sans-serif;
+
+@font-face {
+	font-family: $main-font;
+	src: url('../fonts/ProximaNova-Regular.eot') format('eot'),
+	url('../fonts/ProximaNova-Regular.woff') format('woff'),
+	url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+	url('../fonts/ProximaNova-Regular.svg#webfont') format('svg');
+	// font-weight: 400;
+}
+
+@font-face {
+	font-family: $main-font;
+	src: url('../fonts/ProximaNova-Bold.eot') format('eot'),
+	url('../fonts/ProximaNova-Bold.woff') format('woff'),
+	url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+	url('../fonts/ProximaNova-Bold.svg#webfont') format('svg');
+	// font-weight: 700;
+}
+
+@font-face {
+	font-family: $main-font;
+	src: url('../fonts/ProximaNova-Light.eot') format('eot'),
+	url('../fonts/ProximaNova-Light.woff') format('woff'),
+	url('../fonts/ProximaNova-Light.ttf') format('truetype'),
+	url('../fonts/ProximaNova-Light.svg#webfont') format('svg');
+	// font-weight: 300;
+}
+
+@font-face {
+	font-family: $main-font;
+	src: url('../fonts/ProximaNova-SemiBold.eot') format('eot'),
+	url('../fonts/ProximaNova-SemiBold.woff') format('woff'),
+	url('../fonts/ProximaNova-SemiBold.ttf') format('truetype'),
+	url('../fonts/ProximaNova-SemiBold.svg#webfont') format('svg');
+	// font-weight: 600;
+}
+
+//COLORS
+$first-screen-bg: #eef5ea;
+$title-color: #292929;
+$lite-grey: #9f9f9f;
+$form-color: #f3faeb;
+$form-grey: #abafb0;
+$form-lite-grey: #acb3aa;
+$dark-green: #038a7a;
+$orange: #f45c07;
+$link-color: #82b2b8;
+$btn-color: #247884;
+$dark-blue: #056572;
+$blue: #117bc0;
+$link-color: #91bbc1;
+$white: #ffffff;
+$black: #000;
+
+
+//SIZE
+$base-size: 18px;
+@function px_to_rem($target, $context: $base-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0rem;
+}
+
+$small-size: px_to_rem(14px);
+$middle-size: px_to_rem(16px);
+$logo-size: px_to_rem(20px);
+$button-size: px_to_rem(23px);
+$section-subtitle: px_to_rem(30px);
+$section-title: px_to_rem(40px);
+$main-title: px_to_rem(50px);
+

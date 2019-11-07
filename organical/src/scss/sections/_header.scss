@@ -1,0 +1,357 @@
+.header{
+	background: linear-gradient(to bottom, rgba($first-screen-bg, .7) 0%, rgba($first-screen-bg, .3) 50%, rgba($first-screen-bg, 0) 100%), url('../img/bg-image.jpg') no-repeat;
+	background-size: cover;
+
+	&__head{
+		padding: 15px 25px 0px;
+		margin-bottom: 20px;
+
+		@media all and (min-width: 992px){
+			padding: 25px 50px 0px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__logo{
+		color: $title-color;
+		font-weight: 700;
+		font-size: $middle-size;
+
+		@media all and (min-width: 992px){
+			font-size: $logo-size;
+		}
+
+		&:hover{
+			color: $title-color;
+		}
+	}
+
+	&__menu{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+
+	&__menu-list{
+		list-style: none;
+
+		&:first-child{
+			margin-right: 5px;
+		}
+	}
+
+	&__menu-link{
+		color: $title-color;
+		font-size: $middle-size;
+
+		&:hover{
+			color: $orange;
+		}
+	}
+
+	&__wrapper-title{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__svg{
+		margin-right: 5px;
+
+		@media all and (min-width: 992px){
+			margin-right: 15px;
+		}
+	}
+
+	&__main-title{
+		font-size: $button-size;
+		font-weight: 300;
+		color: $title-color;
+		margin-bottom: 0;
+
+		@media all and (min-width: 430px){
+			font-size: $section-subtitle;
+		}
+
+		@media all and (min-width: 768px){
+			font-size: $section-title;
+		}
+
+		@media all and (min-width: 992px){
+			font-size: $main-title;
+		}
+	}
+
+	&__bold{
+		font-weight: 700;
+	}
+
+	&__main-subtitle{
+		font-size: $small-size;
+		font-weight: 600;
+		color: $orange;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 0;
+
+		@media all and (min-width: 430px){
+			font-size: $middle-size;
+		}
+
+		@media all and (min-width: 768px){
+			font-size: $base-size
+		}
+	}
+
+	&__image-wrapper{
+		width: 100%;
+
+		@media all and (min-width: 768px){
+			@include padding-hack(106%, containe);
+		}
+
+		@media all and (min-width: 1200px){
+			@include padding-hack(75%);
+		}
+	}
+
+	&__login-form{
+		display: flex;
+		flex-direction: column;
+		background-color: rgba($form-color, .8);
+		padding: 20px 0px 15px;
+		width: 100%;
+		max-width: 350px;
+
+		@media all and (min-width: 992px){
+			max-width: 500px;
+			padding: 40px 0px 30px;
+		}
+	}
+
+	&__for-title{
+		margin-bottom: 20px;
+
+		@media all and (min-width: 992px){
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title-form{
+		font-size: $logo-size;
+		font-weight: 600;
+		color: $dark-green;
+		text-align: center;
+
+		@media all and (min-width: 430px){
+			font-size: $button-size;
+		}
+
+		@media all and (min-width: 992px){
+			font-size: $section-subtitle;
+		}
+	}
+
+	&__caption-form{
+		font-size: $middle-size;
+		color: $title-color;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
+	&__wrapper-form{
+		padding: 0px 20px;
+		font-size: $small-size;
+
+		@media all and (min-width: 992px){
+			padding: 0px 70px;
+		}
+
+		@media all and (min-width: 1200px){
+			padding: 0px 100px;
+		}
+	}
+
+	&__email, &__password{
+		width: 100%;
+		padding: 10px 5px;
+	}
+
+	&__for-email{
+		margin-bottom: 15px;
+	}
+
+	&__for-password{
+		margin-bottom: 5px;
+	}
+
+	&__for-email, &__for-password{
+		position: relative;
+		z-index: 0;
+
+		@media all and (min-width: 992px){
+			margin-bottom: 20px;
+		}
+
+		label{
+			position: absolute;
+			left: 15px;
+			top: 0;
+			transform: translateY(-50%);
+			z-index: 2;
+			color: $lite-grey;
+			margin-bottom: 0;
+
+			&::after{
+				content: "";
+				background-color: $white;
+				position: absolute;
+				height: 2px;
+				left: -5px;
+				right: -5px;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: -1;
+			}
+		}
+
+	}
+
+	&__pencil{
+		display: none;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+
+	&__email:focus ~ label, 
+	&__password:focus ~ label{
+		color: $blue;
+	}
+
+	&__email:focus ~ .header__pencil,
+	&__password:focus ~ .header__pencil{
+		display: block;
+	}
+
+	&__enter{
+		display: block;
+		color: $title-color;
+		text-decoration: underline solid $form-lite-grey;
+		margin-bottom: 10px;
+
+		@media all and (min-width: 992px){
+			margin-bottom: 20px;
+		}
+
+		&:hover{
+			color: $dark-green;
+			transition: color .2s ease;
+		}
+	}
+
+	&__for-btn{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+
+		@media all and (min-width: 992px){
+			margin-bottom: 40px;
+			justify-content: flex-end;
+		}
+	}
+
+	&__btn{
+		@include btn($white, $orange);
+		background-color: $dark-green;
+		border: none;
+		padding: 10px 25px;
+		max-width: 80%;
+
+		@media all and (min-width: 430px){
+			padding: 10px 50px;
+		}
+
+		@media all and (min-width: 992px){
+			padding: 10px 15px;
+			max-width: 60%;
+		}
+
+		@media all and (min-width: 1200px){
+			max-width: 50%;
+		}
+	}
+
+	&__arrow{
+		display: block;
+		width: 30px;
+		height: 30px;
+		border-left: 1px solid $white;
+		margin-left: 40px;
+		background: url("../img/arrow.png") no-repeat 100% 50%;
+
+		@media all and (min-width: 992px){
+			margin-left: 20px;
+		}
+	}
+
+	&__text{
+		text-align: justify;
+		margin-bottom: 0;
+		color: $form-lite-grey;
+
+		.blue{
+			color: $dark-green;
+			text-decoration: underline solid $dark-green;
+
+			&:hover{
+				color: $orange;
+				text-decoration-color: $orange;
+				transition: color .2s ease,text-decoration-color .2s ease;
+			}
+
+		}
+
+
+	}
+
+	&__margin{
+		margin-bottom: 50px;
+
+		@media all and (min-width: 992px){
+			margin-bottom: 80px;
+		}
+
+		@media all and (min-width: 1200px){
+			margin-bottom: 100px;
+		}
+	}
+
+	&__blue-section{
+		background-color: $dark-blue;
+	}
+
+	&__orange-section{
+		background-color: $orange;
+	}
+
+	&__green-section{
+		background-color: $dark-green;
+	}
+
+	&__text-wrapper{
+		color: $white;
+		text-align: center;
+		font-size: $middle-size;
+		padding: 10px 0;
+
+		@media all and (min-width: 992px){
+			font-size: $base-size;
+			padding: 20px 0;
+		}
+	}
+
+}

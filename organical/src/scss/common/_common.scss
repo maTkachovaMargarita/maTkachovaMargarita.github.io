@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	font-size: 100%;
+	font-family: $main-font;
+	font-weight: 400;
+	color: $title-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+
+a{
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.header, .ftp, .wwd{
+		margin-bottom: 30px;
+
+		@media all and (min-width: 576px){
+			margin-bottom: 50px;
+		}
+
+		@media all and (min-width: 768px){
+			margin-bottom: 100px;
+		}
+}
